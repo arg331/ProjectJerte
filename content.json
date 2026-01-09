@@ -1,0 +1,61 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+        // ---------------------------------------------------------
+        // PASO 1: CARGAR LA TEXTURA EN MEMORIA (FIX TEXTURA INVISIBLE)
+        // ---------------------------------------------------------
+        {
+            "Action": "Load",
+            "Target": "Mods/ProjectJerte/TortaTexture", // Nombre interno inventado
+            "FromFile": "assets/torta_casar.png"         // Archivo real
+        },
+
+        // ---------------------------------------------------------
+        //  PASO 2: DEFINICIÓN DEL OBJETO
+        // ---------------------------------------------------------
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                "TortaDelCasar": {
+                    "Name": "Torta del Casar",
+                    "DisplayName": "Torta del Casar",
+                    "Description": "Huele que alimenta, a Julia le encanta :)",
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Price": 1200,
+                    
+                    // Y ZAS, la magia del Action:Load
+                    "Texture": "Mods/ProjectJerte/TortaTexture", 
+                    "SpriteIndex": 0, // primera imagen de archivo
+                    
+                    "Edibility": 150,
+                    "BuffDuration": 400, 
+                    "Buffs": [
+                        {
+                            "BuffId": "Defense",
+                            "Value": 3
+                        },
+                        {
+                            "BuffId": "Luck",
+                            "Value": 1
+                        }
+                    ]
+                }
+            }
+        },
+
+        // ---------------------------------------------------------
+        // PASO 3: RECETA 
+        // ---------------------------------------------------------
+        {
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": {
+                // CAMBIO: "Milk" -> "184" (ID Universal de la Leche)
+                // Formato: Ingrediente ID Cantidad ...
+                "Torta del Casar": "184 1/100 10/TortaDelCasar/default/Torta del Casar"
+            }
+        }
+    ]
+}

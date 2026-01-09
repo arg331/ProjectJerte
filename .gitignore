@@ -1,0 +1,18 @@
+# Archivos de sistema operativo (Basura)
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+tmp/
+
+# Carpetas de compilación 
+bin/
+obj/
+
+# Archivos de configuración de usuario (VS Code)
+.vscode/
+*.code-workspace
+
+# Preferencias del mod (Si se generan al jugar)
+config.json

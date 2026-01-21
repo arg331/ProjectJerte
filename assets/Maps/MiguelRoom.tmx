@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.2" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="8" nextobjectid="22">
+ <tileset firstgid="1" name="townInterior_2" tilewidth="16" tileheight="16" tilecount="1312" columns="32">
+  <image source="townInterior_2.png" width="512" height="656"/>
+ </tileset>
+ <tileset firstgid="1313" name="townInterior" tilewidth="16" tileheight="16" tilecount="2176" columns="32">
+  <image source="townInterior.png" width="512" height="1088"/>
+ </tileset>
+ <tileset firstgid="3489" name="paths" tilewidth="16" tileheight="16" tilecount="64" columns="4">
+  <image source="paths.png" width="64" height="256"/>
+ </tileset>
+ <layer id="1" name="Back" width="10" height="10">
+  <properties>
+   <property name="Action" value=""/>
+  </properties>
+  <data encoding="csv">
+1026,1026,1026,1026,1026,1026,1026,1026,1026,1026,
+1026,1026,1347,1347,1347,1347,1347,1347,1026,1026,
+1026,1026,1379,1379,1379,1379,1379,1379,1026,932,
+1026,1410,1411,1411,1411,1411,1411,1411,1412,932,
+931,1948,1948,1948,1948,1948,1948,1948,1948,1916,
+931,1948,1948,1916,1948,1948,1948,1916,1916,931,
+1448,1948,1948,1948,1948,1948,1948,1916,1916,931,
+1916,1948,1948,1948,1948,1948,1948,1948,1948,931,
+1916,1948,1948,1948,1948,1948,1948,1948,1948,1448,
+3497,1916,1789,1948,1948,1948,1948,1948,1948,931
+</data>
+ </layer>
+ <layer id="3" name="Buildings" width="10" height="10">
+  <data encoding="csv">
+1313,1314,1315,1315,1315,1315,1315,1315,1316,1313,
+1345,1346,1347,1347,1347,1347,1347,1347,1348,1349,
+1377,1892,1893,1892,1893,1379,1379,1379,1380,1381,
+1377,1924,1925,1924,1925,2408,2409,1637,1638,1381,
+1377,1956,1957,1956,1957,2440,2441,1669,1670,1381,
+1377,2205,0,0,0,0,0,0,0,1381,
+1377,2493,0,0,0,0,2147,1633,1634,1381,
+1377,0,0,0,0,0,0,1831,1832,1381,
+1377,1705,1757,2385,2387,0,0,0,1627,1381,
+1473,1474,1789,2417,2419,1475,0,0,2147,1480
+</data>
+ </layer>
+ <layer id="4" name="Paths" width="10" height="10" visible="0">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,3497,3497,3497,3497,3497,3497,3497,3497,0,
+0,3497,3497,0,0,0,3497,3497,3497,0,
+0,3497,3497,3497,3497,3497,3497,3497,3497,0,
+0,3497,3497,3497,3497,3497,3497,3497,3497,0,
+0,3497,3497,3497,3497,3497,3497,3497,3497,0,
+0,3497,3497,3497,3497,3497,3497,3497,3497,0,
+0,3497,3497,3497,3497,3497,3497,3497,3497,0,
+0,0,3497,3497,3497,3497,3497,3497,3497,0,
+0,3497,3497,3497,3497,3497,3497,3497,3497,0
+</data>
+ </layer>
+ <layer id="2" name="Front" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,2140,2306,2071,2344,2345,0,0,0,
+0,2021,2126,2188,2189,2376,2376,1782,0,0,
+0,0,0,0,0,0,0,1814,0,0,
+0,2173,0,0,0,0,0,1665,1666,0,
+0,0,0,0,0,0,0,2148,2150,0,
+0,0,0,0,0,0,0,1858,1859,0,
+0,1673,1725,2353,2355,0,0,0,0,0,
+0,0,0,2146,1987,0,0,0,0,0,
+0,0,1509,1478,1478,1475,0,1476,1479,0
+</data>
+ </layer>
+ <objectgroup id="7" name="Buildings">
+  <object id="3" x="66.75" y="133.625" width="10.625" height="11">
+   <properties>
+    <property name="Action" value="Letter Miguel_mujer_cactus"/>
+   </properties>
+  </object>
+  <object id="14" x="32" y="128" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;ordenadorMiguel&quot;"/>
+   </properties>
+  </object>
+  <object id="15" x="32" y="64" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;miguel_estante1&quot;"/>
+   </properties>
+  </object>
+  <object id="16" x="48" y="48" width="16" height="32">
+   <properties>
+    <property name="Action" value="Message &quot;miguel_EstanteGrande1&quot;"/>
+   </properties>
+  </object>
+  <object id="17" x="64" y="48" width="16" height="32">
+   <properties>
+    <property name="Action" value="miguel_estante2"/>
+   </properties>
+  </object>
+  <object id="18" x="80" y="48" width="32" height="32">
+   <properties>
+    <property name="Action" value="Message &quot;ordenadorFrecuencias&quot;"/>
+   </properties>
+  </object>
+  <object id="19" x="16" y="80" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message hola"/>
+   </properties>
+  </object>
+  <object id="20" x="16" y="96" width="16" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;robotIA_1&quot;"/>
+   </properties>
+  </object>
+  <object id="21" x="112" y="96" width="32" height="16">
+   <properties>
+    <property name="Action" value="Message &quot;jaulaAlvin&quot;"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

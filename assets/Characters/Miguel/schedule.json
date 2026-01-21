@@ -1,0 +1,22 @@
+{
+    // LUNES: Rutina normal de trabajo
+    "Mon": "610 MiguelRoom 3 5 0/800 MiguelRoom 5 5 0/900 MiguelRoom 2 5 3/1300 Town 29 67 2/1700 Saloon 18 20 2/2300 MiguelRoom 3 5 0",
+
+    // MARTES: Quedada con Maru (En el banco cerca del centro cívico/clínica)
+    // Coordenada Town 48 56 es un banco cerca de la clínica.
+    "Tue": "610 MiguelRoom 3 5 0/1000 MiguelRoom 2 5 3/1400 Town 48 56 2/1800 Saloon 18 20 2/2300 MiguelRoom 3 5 0",
+
+    // VIERNES: Noche de Juegos con Sam y Sebastian
+    // Saloon 34 18 está cerca de las máquinas recreativas/billar.
+    "Fri": "610 MiguelRoom 3 5 0/1200 Town 29 67 2/1600 Saloon 34 18 1/2330 MiguelRoom 3 5 0",
+
+    // SÁBADO: Ayudando a Gus (Detrás de la barra o cocina)
+    // Saloon 13 22 es cerca de la cocina/barra trasera.
+    "Sat": "610 MiguelRoom 3 5 0/1100 Saloon 13 22 0/1600 Town 29 67 2/2100 MiguelRoom 3 5 0",
+
+    // DOMINGO: Día de relax en la plaza
+    "Sun": "800 MiguelRoom 5 5 0/1200 Town 29 67 2/2000 MiguelRoom 3 5 0",
+
+    // DEFAULT (Resto de días: Spring, Summer, etc por si falla el día específico)
+    "spring": "610 MiguelRoom 3 5 0/800 MiguelRoom 5 5 0/1300 Town 29 67 2/1700 Saloon 18 20 2/2300 MiguelRoom 3 5 0"
+}

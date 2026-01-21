@@ -1,0 +1,60 @@
+{
+    "Introduction": "¡Ey, hola! Tú debes de ser @, ¿verdad? Soy Miguel.#$b#Gus me ha hablado muchísimo de ti. Es mi primo, me convenció para venir aquí buscando paz.#$b#Si necesitas cualquier cosa... ¡aquí estoy!",
+
+    "Mon": "Perdona si tardo en contestar, @. Tengo una fecha de entrega mañana y el servidor está caprichoso hoy.#$b#Pero tú háblame, que me apetece escucharte.",
+    "Mon4": "¡Ey!, menos mal que has venido. Estaba a punto de tirarle el monitor a la cabeza a alguien, necesitaba ver una cara amiga.", 
+    "Mon6": "¿Sabes? Creo que venirme al valle es lo mejor que he hecho nunca. La vida en la ciudad está bien, pero tengo la sensación de que cuanto más trabajas con tecnología, más ganas tienes de convertirte en un ermitaño.",
+
+    "Tue": "He estado charlando con Maru. Es increíble lo que sabe sobre robótica.#$b#Espero aprender más cosillas de ella.",
+    "Tue2" : "Hoy el servidor va lentísimo, creo que una ardilla ha mordido el cable...#$b#Tú, como experta... ¿te puedes pasar a mirarlo? Tengo café recién hecho. ",
+
+    "Wed": "¡Hola @! ¿Cómo estás hoy? Hoy Juja hace streaming, quizá vaya a ver a Gus y me tomo una cerveza con él. ¡Podrías acercarte!",
+    "Wed2": "Anoche no dormí nada. Me quedé hasta tarde haciendo un mod de un jueguito para una persona esp...#$b#Vaya, me estoy yendo de la lengua...#$b#...Espero que le guste.",
+    "Thu": "Mañana es viernes. Sebastian me ha prometido enseñarme algo, pero creo que solo quiere que mire su código...",
+    "Thu2" : "La gente cree que las artes marciales son solo pelear, pero para mí es terapia.#$b#Me ayudan a despejar la mente cuando me bloqueo.", 
+
+    "Thu4": "¿Te duele la espalda de trabajar en el campo? Si quieres te puedo enseñar algunos estiramientos.#$b#No soy un experto, pero en taekwondo tenemos mucho cuidado con esas cosas.",
+    
+    "Fri": "¡Por fin viernes! Esta noche toca Saloon. Sam dice que me va a ganar al billar, pero tengo calculados los vectores de tiro. Aunque... antes tengo una reunión con unos clientes.",
+    "Fri2" : "¿Sabías que el cemento hay que regarlo? Parece broma, pero es muy importante para que adquiera consistencia.#$b#Es curioso, ¿verdad?", 
+
+    "Sat": "Hoy ayudo a mi primo Gus en el Saloon. Pásate, ¡que seguro que puedo invitarte a algo!",
+    "Sat2" : "¿Has comido algo? Mi madre siempre decía que no se puede trabajar con el estómago vacío.#$b#Si quieres, le pido a Gus que te prepare algo especial.", 
+    "Sun": "A veces me voy al muelle con mi Nintendo DS. No sabes lo que me relaja jugar a Pokémon Oro...#$b#¿Lo has jugado? Cuando quieras, está en mi mesilla, tan solo... Déjame una nota, que si pienso que lo he perdido, me muero",
+    
+    "rain": "Qué bonita es la lluvia... En mi tierra no se ve apenas, mi madre siempre hace migas cuando llueve.",
+    "rain4": "Se respira una paz... ¿Te apetece sentarte un rato? Tengo café recién hecho en la cafetera.",
+
+
+
+   // VERANO 20-21: DERBI DE LA TRUCHA (1.6)
+    "summer_20": "¿Sabías que las truchas tienen una memoria olfativa brutal?#$b#Son capaces de oler la composición química de su río natal para volver a él nadando contracorriente. La naturaleza es cabezona, eh?.",
+    "spring_17": "El cielo aquí se ve distinto. Sin la humedad del valle, las estrellas parecen más afiladas, ¿verdad?",
+   "winter_12": "Los calamares son increíbles. Tienen tres corazones y sangre azul porque usan cobre en vez de hierro para transportar oxígeno.#$b#Son prácticamente alienígenas!!#$b# A Gus solo le importa que queden bien fritos, claro.",
+   "summer_28": "Las medusas lunares... He leído que su llegada no es casualidad, está sincronizada matemáticamente con los ciclos lunares de final de verano.#$b#La naturaleza es impresionante. No tienen cerebro, ni calendario, y sin embargo, nunca llegan tarde... Llegan cuando tienen que llegar",
+   "green_rain": "Esto es fascinante... Nunca había visto un musgo crecer a esta velocidad. Es como si la naturaleza tuviera prisa por recuperar lo que es suyo.",
+    // Festival del Huevo (Día 13 Primavera)
+    "spring_13": "¡El Festival del Huevo! Este año no voy a jugar, he visto varios huevos ya y sería trampa de cara a los pequeñajos.#$b#Pero Abigail se lo toma muy en serio, da miedo.",
+    
+    // Danza Floral (Día 24 Primavera) - El momento incómodo
+    "spring_24": "Uf... bailar en público no es lo mío. Me pongo muy nervioso, tengo que ir mejorándolo poco a poco, aún me da mucho corte, te prometo que lo estoy solucionando, tú confía",
+    
+    // Luau (Día 11 Verano)
+    "summer_11": "Gus está nervioso por la sopa. Le he dicho que si falla, leakeo las fotos del Gobernador con su amante, pero creo que no le ha hecho gracia la broma...",
+    
+    // Halloween / Spirit's Eve (Día 27 Otoño)
+    "fall_27": "¿Has visto el laberinto? Los niños se lo están pasando muy muy bien, ojalá volver a tener su edad, eh?",
+    
+    // Estrella de Invierno (Día 25 Invierno)
+    "winter_25": "La Fiesta de la Estrella de Invierno... Me encanta. Es la única época del año en la que mi primo Gus descansa un poco.#$b#Le he comprado un juego de cuchillos nuevos de acero de Toledo, shhh, no digas nada.",
+   // =============================================================
+    // REGALOS
+    // =============================================================
+    "give_gift_Miguel_395": "¡Café! Dios, gracias.#$b#Eres mi salvadora. Ahora sí que puedo terminar el proyecto.",
+    "give_gift_Miguel_253": "¡¿Un Triple?! ¡Ostras! #$b#¡Me encanta! Gracias @, con esto voy a ver el código en Matrix.",
+    "give_gift_Miguel_167": "¿Joja Cola? Uf... lo siento, pero prefiero no beber esto.#$b#Joja es un peligro y no puedo evitar compararlo con un buen café artesano, lo siento.",
+    
+    "give_gift_Miguel_Love": "¡Qué pasada! ¿Esto es para mí?#$b#Me encanta, de verdad. Son las pequeñas cosas las que me alegran el día. ¡Gracias!",
+    "give_gift_Miguel_Like": "¡Anda! Muchas gracias. Tiene muy buena pinta.",
+    "give_gift_Miguel_Hate": "¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Gracias por la intención, supongo.",
+    "give_gift_Miguel_Birthday_Love": "¡Anda! ¿Te has acordado de mi cumple?#$b#Normalmente se me olvida hasta a mí. Eres increíble, me alegro de tenerte a mi lado @." }

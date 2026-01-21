@@ -1,0 +1,24 @@
+{
+  "Id": "Alvin_NPC",
+  "Name": "Alvin",
+  "Type": "Walking",
+  "TileSheetPath": "assets/Animals/Alfie/alfie_1.png", // Usa la misma imagen
+  "FrameSize": {
+    "Width": 32,
+    "Height": 32
+  },
+  "Frames": [
+    { "Start": 0, "Count": 4, "Duration": 200 } // Animación de caminar
+  ],
+  "IdleAnimation": [
+    { "Start": 0, "Count": 1, "Duration": 6000 }, // Quieto
+    { "Start": 4, "Count": 1, "Duration": 200 }, // Parpadeo/Movimiento
+    { "Start": 20, "Count": 1, "Duration": 5000 } // Dormir (si el sprite tiene pose de dormir en el frame 20)
+  ],
+  "InspectionDialogue": "Es Alvin. Parece que está planeando la dominación mundial... o buscando lechuga.",
+  "SpawnLocation": "MiguelRoom", // Aparece en la habitación de Miguel
+  "SpawnPosition": { "X": 7, "Y": 7 }, // Cerca de la jaula
+  "WanderArea": { "X": 6, "Y": 6, "Width": 3, "Height": 2 }, // Solo se mueve en este recuadro de 3x2 bloques
+  "Direction": "down",
+  "Shadow": true
+}

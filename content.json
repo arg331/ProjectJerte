@@ -87,6 +87,126 @@
        // ==========================================================================================
         // 2. OBJETOS
         // ==========================================================================================
+        { 
+            "Action": "Load", 
+            "Target": "Mods/ProjectJerte/ObjetosIndalia", 
+            "FromFile": "assets/items/cerveza_indalia.png" 
+        },
+
+      
+        {
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+                // EL LÚPULO INDALIANO
+                "ProjectJerte.LupuloIndalo": {
+                    "Name": "Lúpulo de Indalia",
+                    "DisplayName": "Lúpulo de Indalia",
+                    "Description": "Una variedad especial traída del sur. Es la clave de la cerveza favorita de Miguel.",
+                    "Type": "Basic",
+                    "Category": -75,
+                    "Price": 60,
+                    "Texture": "Mods/ProjectJerte/ObjetosIndalia",
+                    "SpriteIndex": 0,
+                    "Edibility": 20
+                },
+                // LA SEMILLA INDALIANA 
+                "ProjectJerte.SemillaIndalo": {
+                    "Name": "Semillas de Indalia",
+                    "DisplayName": "Semillas de Lúpulo de Indalia",
+                    "Description": "Plántalas en verano. Tardan 11 días en crecer. Crecen en espaldera.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 60,
+                    "Texture": "Mods/ProjectJerte/ObjetosIndalia",
+                    "SpriteIndex": 1,
+                    "Edibility": -300
+                },
+                // LA CERVEZA ALHAMBRA (SpriteIndex 2 - El tercero, tu botella)
+                "ProjectJerte.CervezaAlhambra": {
+                    "Name": "Cerveza Especial",
+                    "DisplayName": "Cerveza Alhambra 1925",
+                    "Description": "Cerveza estilo Alhambra 1925, no te tomes más de dos...",
+                    "Type": "Cooking",
+                    "Category": -26,
+                    "Price": 500,
+                    "Texture": "Mods/ProjectJerte/ObjetosIndalia",
+                    "SpriteIndex": 2,
+                    "Edibility": 60,
+                    "Buffs": [ 
+                        // Efecto 1: Contentillo (Borrachera normal) 
+                        { 
+                            "BuffId": "Tipsy", 
+                            "Duration": 3600 
+                        }, 
+                      
+                        { 
+                            "BuffId": "Luck", 
+                            "Value": 3, 
+                            "Duration": 3600 
+                        } 
+                    ]
+                }
+            }
+        },
+        //SEMILLADORA INDALO
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC)25", "OutputRules" ],
+            "Entries": {
+                "ProjectJerte.Rule_SeedMaker_Indalo": {
+                    "Id": "ProjectJerte.Rule_SeedMaker_Indalo",
+                    "Triggers": [
+                        {
+                            "Id": "Input",
+                            "RequiredItemId": "ProjectJerte.LupuloIndalo",
+                            "Count": 1
+                        }
+                    ],
+                    "OutputItem": [
+                        {
+                            "ItemId": "ProjectJerte.SemillaIndalo",
+                            "MinStack": 1, // Mínimo 1 semilla
+                            "MaxStack": 3, // Máximo 3 semillas (random)
+                            "ProcessingTime": 20 // Tarda 20 minutos de juego (instantáneo casi)
+                        }
+                    ]
+                }
+            }
+        },
+
+        // 3. EL CULTIVO (Usa gráficos Vanilla, pero da TU objeto)
+        {
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "ProjectJerte.SemillaIndalo": {
+                    "Seasons": [ "summer" ],
+                    "DaysInPhase": [ 1, 2, 2, 3, 3 ],
+                    "RegrowDays": 1,
+                    "IsRaised": true,
+                    "HarvestItemId": "ProjectJerte.LupuloIndalo", // <-- Da tu lúpulo
+                    "Texture": "TileSheets\\crops", // <-- Usa gráficos del juego
+                    "SpriteIndex": 16 // <-- Usa el dibujo del lúpulo normal
+                }
+            }
+        },
+
+        // 4. REGLA DEL BARRIL (KEG)
+        {
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC)12", "OutputRules" ],
+            "Entries": {
+                "ProjectJerte.Rule_Alhambra": {
+                    "Id": "ProjectJerte.Rule_Alhambra",
+                    "Triggers": [ { "Id": "Input", "RequiredItemId": "ProjectJerte.LupuloIndalo", "Count": 1 } ],
+                    "OutputItem": [ { "ItemId": "ProjectJerte.CervezaAlhambra", "MinStack": 1, "MaxStack": 1, "ProcessingTime": 2250 } ]
+                }
+            }
+        },
+       
         {
             "Action": "EditData",
             "Target": "Data/Objects",
@@ -107,7 +227,7 @@
                 "Migas": {
                     "Name": "Migas",
                     "DisplayName": "Migas Extremeñas",
-                    "Description": "Plato de pastor. Pan, ajo y chorizo.",
+                    "Description": "Platazo de la cocina de Iberia, gusta en todo el mundo. En Indalia, se hacen cuando llueve",
                     "Type": "Cooking",
                     "Category": -7,
                     "Price": 250,
@@ -185,11 +305,11 @@
                 "robotIA_1": "Es el prototipo 'Hansel Mk1'.#Le faltan las baterías y tiene una pegatina en la frente: 'Te vas a poner a discutirle sobre filosofía a la madre que te parió'.",
                 "telescopioMiguel": "Está apuntando hacia la ventana de Maru... No, espera.#Está apuntando a la constelación de Andrómeda. Hay anotaciones sobre coordenadas estelares, además de una imagen de la serie 'Érase una vez, el espacio'.",
                 "miguel_estante1": "Crítica a la razón pura, de Immanuel Kant, detrás hay libros de Dostoyevski y sobre todo, de Spinoza.#Entre ellos hay un libro de... ¿Pokémon?: 'Por qué la cuarta generación es la mejor de todas, por Knekro'... ¿Quién es Knekro?",
-                "estante2": "Está llena de componentes electrónicos y cables enredados.#Es la definición de 'caos ordenado'.",
+                "estante2": "Está llena de componentes electrónicos y cables enredados.",
                 "estante3": "Libros de historia moderna y logística, te llama la atención un libro titulado 'Por qué es importante regar el cemento' de 2002.",
                 "ordenadorFrecuencias": "La pantalla muestra ondas de radio en tiempo real.#Está escaneando frecuencias locales. Hay un post-it: '¿Por qué el Wi-Fi va peor cuando llueve? Preguntar a J...a'.",
                 "jaulaAlvin": "Aquí vive Alvin, la cobaya de Miguel.#Está royendo una figura de madera vieja de un bombardero alemán. Parece feliz.#En el cartel pone: 'No le pongas el dedo, por el amor de dios'.",
-                "ordenadorMiguel": "El salvapantallas es una lluvia de código verde.#Hay una pestaña del navegador abierta: 'Cómo saber si le gustas a una granjera sin morir de vergüenza, WikiHow'#Este tío está de la olla..."
+                "ordenadorMiguel": "El salvapantallas es una lluvia de código verde.#Hay una pestaña del navegador abierta: 'Final de la Copa Mundial de Tetris, 2023'#Este tío está de la olla..."
             }
         },
 
@@ -234,9 +354,12 @@
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Entries": {
-                "Miguel": "¡Bua! ¿En serio? ¡Justo lo que necesitaba!#$b#Me conoces demasiado bien, @. Muchísimas gracias./395 253 787 TortaDelCasar Migas/-26 206 80/ /167/ /¡Anda! Muchas gracias. Tiene muy buena pinta./¿Esto? Bueno... gracias por la intención./¿Eh? ¿Esto...? Perdona, pero no sé muy bien qué hacer con esto./Gracias./¡Anda! ¿Te has acordado de mi cumple?#$b#Eres increíble, @."
+                // FORMATO: Dialogo Love / Items Love / Items Like / Items Dislike / Items Hate / Items Neutral / Reaccion Love / Reaccion Like / Reaccion Dislike / Reaccion Hate / Reaccion Neutral
+                // Items Like incluye: -2 (Minerales), -7 (Cocina), -26 (Artesanos), -75 (Verduras), -79 (Frutas), -80 (Flores), -81 (Recoleccion)
+                "Miguel": "¡Bua! ¿En serio? ¡Justo lo que necesitaba!#$b#Me conoces demasiado bien, @. Muchísimas gracias./395 253 787 TortaDelCasar Migas/-2 -7 -26 -75 -79 -80 -81/ /167 168 169 170 171 172/ /¡Qué pasada! ¿Esto es para mí?#$b#Me encanta, de verdad. Son las pequeñas cosas las que me alegran el día. ¡Gracias!/¡Anda! Muchas gracias. Tiene muy buena pinta./¿Esto? Bueno... gracias por la intención./¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Gracias por la intención, supongo./Gracias./¡Anda! ¿Te has acordado de mi cumple?#$b#Normalmente se me olvida hasta a mí. Eres increíble, me alegro de tenerte a mi lado @."
             }
         },
+
         { "Action": "Load", "Target": "Characters/Dialogue/Miguel", "FromFile": "assets/Characters/Miguel/dialogue.json" },
         { "Action": "Load", "Target": "Characters/Schedules/Miguel", "FromFile": "assets/Characters/Miguel/schedule.json" },
         // ==========================================================================================
@@ -246,10 +369,32 @@
             "Action": "EditData",
             "Target": "Data/Events/Farm",
             "Entries": {
-                "99112233/f Miguel 500/t 600 1000/w sunny": "none/-1000 -1000/farmer 64 15 3 Miguel 64 16 0/skippable/pause 1000/speak Miguel \"¡Hola, @!^Siento aparecer así.\"/pause 400/speak Miguel \"Ya conoces a Alvin, mi cobaya, ¿verdad? Pues resulta que ahora tiene un hermanito.\"/speak Miguel \"Ya no tengo espacio en mi habitación con Alvin corriendo por ahí, así que he pensado que quizá te gustaría a ti tenerlo.\" #$b#He pensado que quizás Alfie estaría mejor contigo./pause 500/emote Miguel 20/speak Miguel \"¡Genial! Sabía que os llevaríais bien.\"/playSound dwop/emote Miguel 20/speak Miguel \"¡Cuídalo mucho! Le encantan las zanahorias.\"/pause 500/speak Miguel \"Lo he dejado con Marnie, le está poniendo unas vacunas, espero que no se ponga nervioso... Pásate por su tienda y podrás recogerlo gratis, ya está todo el papeleo hecho.\"/move Miguel 0 1 3/end"
+                "99112233/f Miguel 500/t 600 1000/w sunny": "none/-1000 -1000/farmer 64 15 3 Miguel 64 16 0/skippable/pause 1000/speak Miguel \"¡Hola, @!^¿Qué tal estás?.\"/pause 400/speak Miguel \"Ya conoces a Alvin, mi cobaya, ¿verdad? Pues bueno, resulta que ahora tiene un hermanito.\"/speak Miguel \"Ya no tengo espacio en mi habitación con Alvin corriendo por ahí, así que he pensado que quizá te gustaría a ti tenerlo.\" #$b#He pensado que quizás Alfie estaría mejor contigo./pause 500/emote Miguel 20/speak Miguel \"¡Genial! Sabía que os llevarais bien.\"/playSound dwop/emote Miguel 20/speak Miguel \"¡Cuídalo mucho! Le encantan las zanahorias.\"/pause 500/speak Miguel \"Lo he dejado con Marnie, le está poniendo unas vacunas, espero que no se ponga nervioso... Pásate por su tienda y podrás recogerlo gratis, ya está todo el papeleo hecho.\"/move Miguel 0 1 3/end"
             }
         },
 
+
+        // ==========================================================================================
+        // 10. EVENTO 4 CORAZONES: "EL GLITCH" (Saloon)
+        // ==========================================================================================
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/Saloon",
+            "Entries": {
+                // ID 99112255 / 4 Corazones / Viernes (días 5,12,19,26) / Tarde / Abigail, Sam, Seb presentes
+                "99112255/f Miguel 1000/d Fri/t 1700 2200": "content/30 20/farmer 23 19 1 Miguel 19 21 1 Gus 10 18 1 Sam 32 19 3 Sebastian 31 19 3 Abigail 33 20 0/skippable/pause 1000/speak Sam \"¡Vamos, vamos! ¡Cúbreme por la izquierda!\"/speak Abigail \"¡Estoy en ello! ¡Sebastian, eres un manco!\"/pause 500/playSound arcade_game_over/pause 500/speak Sebastian \"...Se ha quedado pillado.\"/emote Sam 28/speak Sam \"¡¿Qué?! ¡No! ¡Estábamos a punto de batir el récord!\"/move farmer 7 0 1/speak Abigail \"Genial. Pantallazo azul. Gus va a tardar semanas en llamar al técnico.\"/move Miguel 10 0 1/speak Miguel \"Perdonad... ¿puedo echar un vistazo?\"/faceDirection Sebastian 3/speak Sebastian \"Oh, hola Miguel. Se ha frito la placa, creo.\"/speak Miguel \"Mmm... no huele a quemado.\"/move Miguel 3 -1 1/pause 500/animate Miguel false true 200 20 21 22/playSound clank/pause 400/playSound clank/speak Miguel \"Ah, vale, sé lo que es, es un desbordamiento. Pasa mucho en estos modelos de los 90.\"/pause 500/stopAnimation Miguel/playSound arcade_game_over/speak Miguel \"Creo que con un puentecillo tonto...\"/pause 1000/playSound reward/emote Sam 16/speak Sam \"¡Funciona! ¡ESTÁ VIVOO!\"/faceDirection Miguel 2/speak Miguel \"Listo. Y de paso os he desbloqueado el modo debug. Ahora tenéis vidas infinitas si pulsáis los dos botones a la vez.\"/emote Abigail 20/speak Abigail \"Vale, eso ha estado muy muy chulo.\"/speak Sebastian \"Nada mal para alguien que trabaja en 'Indalia', eso es todo desierto.\"/speak Miguel \"El código es código, da igual si es para una multinacional o para matar orcos.\"/speak Gus \"¡Miguel! ¡Deja de hackear mis máquinas o te cobro las birras desgraciado!\"/emote Miguel 40/speak Miguel \"¡Era una mejora de software, primo!\"/end"
+            }
+        },
+  // EVENTO 9: INTRODUCCIÓN (BUS STOP - VERSIÓN FINAL)
+        // EVENTO 9: INTRODUCCIÓN (BUS STOP - COORDENADAS FINALES)
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/BusStop",
+            "Entries": {
+               
+                "99112244/f Miguel 0/t 600 1600/w sunny": "none/22 10/farmer 23 17 0 Miguel 22 10 0 Gus 21 10 0/skippable/pause 1000/speak Miguel \"...entonces si redirijo el flujo de datos por el nodo auxiliar...\"/pause 500/speak Gus \"Miguel, ¿estás seguro de que esto es seguro? No quiero que el autobús acabe en una cuneta...\"/emote Miguel 12/speak Miguel \"¡Tranquilo, Gus! Es solo un bypass del protocolo de enlace.\"/move farmer 0 -4 0 -1 0 0/emote Gus 16/faceDirection Gus 2/speak Gus \"¡Ah! ¡Mira quién viene!\"/pause 400/faceDirection Miguel 2/speak Gus \"@, qué alegría verte. Te presento a mi primo, Miguel. Acaba de mudarse al valle.\"/move Miguel 0 1 2/speak Miguel \"Hola! Soy Miguel, trabajo para una empresa de Indalia en remoto, me he venido a vivir al valle buscando paz, no me termina de gustar el ajetreo de la ciudad.\"/pause 400/speak Miguel \"Ahora vivo en una pequeña cabaña en el bosque, al oeste del pueblo. Aunque no mando bombas a universidades ni nada de eso como Kazcynsky.\"/emote Gus 16/shake Gus 500/speak Gus \"¡Miguel! ¡Por favor!\"/speak Miguel \"Solo aclaraba... El caso es que el camino es un infierno de zarzas, así que he convencido a Lewis para que me deje instalar un aparatito que he hecho en vuestro bus. Ahora el bus tiene un piloto automático, si te subes sola, te lleva hasta mi cabaña.\"/speak Gus \"Tan solo, ten cuidado...\"/emote Miguel 20/speak Miguel \"No prometo nada. En fin, @, el sistema ya debería ir bien. Si te aburres, pásate por allí. La verdad que ha quedado bien, Robin vale su peso en oro.\"/end"
+            }
+        },
         // ==========================================================================================
         // 8. FESTIVALES
         // ==========================================================================================

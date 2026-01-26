@@ -1,5 +1,5 @@
 {
-    "Introduction": "¡Ey, hola! Tú debes de ser @, ¿verdad? Soy Miguel.#$b#Gus me ha hablado muchísimo de ti. Es mi primo, me convenció para venir aquí buscando paz.#$b#Si necesitas cualquier cosa... ¡aquí estoy!",
+    "Introduction": "¡Ey, hola! Tú debes de ser @, ¿verdad?. Si necesitas cualquier cosa... ¡aquí estoy!",
 
     "Mon": "Perdona si tardo en contestar, @. Tengo una fecha de entrega mañana y el servidor está caprichoso hoy.#$b#Pero tú háblame, que me apetece escucharte.",
     "Mon4": "¡Ey!, menos mal que has venido. Estaba a punto de tirarle el monitor a la cabeza a alguien, necesitaba ver una cara amiga.", 
@@ -25,6 +25,7 @@
     "rain": "Qué bonita es la lluvia... En mi tierra no se ve apenas, mi madre siempre hace migas cuando llueve.",
     "rain4": "Se respira una paz... ¿Te apetece sentarte un rato? Tengo café recién hecho en la cafetera.",
 
+    "ItemDelivery_ProjectJerte.Quest.Superconductor": "¡Increíble! ¿De verdad es Iridio puro? Mira cómo brilla... es inestable pero perfecto.@, con esto podré compilar años de datos en segundos. Eres salvaje.$h",
 
 
    // VERANO 20-21: DERBI DE LA TRUCHA (1.6)

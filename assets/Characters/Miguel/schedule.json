@@ -1,11 +1,11 @@
 {
-  "Mon": "610 MiguelRoom 5 5 0/800 MiguelRoom 1 8 1/1600 Beach 26 31 2/1900 Saloon 18 20 2/2300 MiguelRoom 2 5 3",
+  "Mon": "610 MiguelRoom 5 5 0/800 MiguelRoom 1 8 1 Miguel_Sit_East/1600 Beach 26 31 2/1900 Saloon 18 20 2/2300 MiguelRoom 2 5 3",
   "Tue": "610 MiguelRoom 1 8 1 Miguel_Typing/1330 ScienceHouse 8 19 2/1700 Town 46 54 2/2000 MiguelRoom 1 8 1 Miguel_Typing/2300 MiguelRoom 2 5 3",
-  "Wed": "610 MiguelRoom 5 5 0/1000 MiguelRoom 1 8 1/1500 Forest 88 48 2/1800 Town 29 67 2/2200 MiguelRoom 2 5 3",
-  "Thu": "610 MiguelRoom 1 8 1/1400 Railroad 26 53 0/1800 Saloon 22 22 1/2300 MiguelRoom 2 5 3",
-  "Fri": "610 MiguelRoom 1 8 1/1200 Town 10 90 2/1600 Saloon 35 19 1/2330 MiguelRoom 2 5 3",
+  "Wed": "610 MiguelRoom 5 5 0/1000 MiguelRoom 1 8 1 Miguel_Sit_East/1500 Forest 88 48 2/1800 Town 29 67 2/2200 MiguelRoom 2 5 3",
+  "Thu": "610 MiguelRoom 1 8 1 Miguel_Sit_East/1400 Railroad 26 53 0/1800 Saloon 22 22 1/2300 MiguelRoom 2 5 3",
+  "Fri": "610 MiguelRoom 1 8 1 Miguel_Sit_East/1200 Town 10 90 2/1600 Saloon 35 19 1/2330 MiguelRoom 2 5 3",
   "Sat": "610 MiguelRoom 5 5 0/1100 Saloon 13 22 0/1500 Saloon 6 19 1/2000 Town 22 56 3/2200 MiguelRoom 2 5 3",
   "Sun": "900 MiguelRoom 5 5 0/1200 Forest 85 50 2/1800 Town 29 67 2/2100 MiguelRoom 2 5 3",
-  "rain": "610 MiguelRoom 5 5 0/1000 MiguelRoom 1 8 1/1500 MiguelRoom 2 5 3/2100 MiguelRoom 1 8 1",
-  "spring": "610 MiguelRoom 2 5 3/800 MiguelRoom 1 8 1/1300 Town 29 67 2/1700 Saloon 18 20 2/2300 MiguelRoom 2 5 3"
+  "rain": "610 MiguelRoom 5 5 0/1000 MiguelRoom 1 8 1 Miguel_Sit_East/1500 MiguelRoom 2 5 3/2100 MiguelRoom 1 8 1 Miguel_Sit_East",
+  "spring": "610 MiguelRoom 2 5 3/800 MiguelRoom 1 8 1 Miguel_Sit_East/1300 Town 29 67 2/1700 Saloon 18 20 2/2300 MiguelRoom 2 5 3"
 }

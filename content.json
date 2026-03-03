@@ -20,7 +20,6 @@
             "FromFile" : "assets/Items/perrunillas.png"
         },
        // CARGO LA HOJA DE SPRITES DE ALFIE (128x256) PARA LA MASCOTA
-        // Esta servirá tanto para el cuerpo como para el icono del menú
         {
             "Action": "Load",
             "Target": "Mods/ProjectJerte/AlfiePetSprite", 
@@ -47,9 +46,9 @@
                             "Id": "Alfie",
                             "Texture": "Mods/ProjectJerte/AlfiePetSprite", 
                             "IconTexture": "Mods/ProjectJerte/AlfiePetSprite",
-                            // CENTRO 16,27 -> Esquina 8,19
+                            // CENTRO 16,27 -> Esquina 8,19 Quizá rehacer
                             "IconSourceRect": { "X": 8, "Y": 19, "Width": 16, "Height": 16 }, 
-                            "CanBeChosenAtStart": false, 
+                            "CanBeChosenAtStart": false, // cambiar?
                             "CanBeAdoptedFromMarnie": true,
                             "AdoptionPrice": 0
                         }
@@ -90,27 +89,25 @@
         },
 
 
-        // ==========================================================================================
-        // CARTAS Y EVENTOS DE CORREO
-        // ==========================================================================================
-        
-        // 1. EL CONTENIDO DE LA CARTA
-        {
-            "Action": "EditData",
-            "Target": "Data/Mail",
-            "Entries": {
-                "Miguel_SummerSeeds": "¡Hola @!^Revisando entre las cajas que traje de Indalia, me he encontrado un paquete de semillas de una variedad especial de lúpulo. Estas semillas son bastante complicadas de encontrar y no tengo demasiadas.^El tema es que no tengo espacio en mi parcela para plantarlas (Aún), así que he pensado que la persona más indicada para tenerlas eres tú.^Si las cuidas bien, verás por qué son tan especiales.^Un saludo,^   - Miguel%item object ProjectJerte.SemillaIndalo 5 %%"
-            }
-        },
        
+       // ==========================================================================================
+        // 4. TRIGGERS (DETONADORES DE CARTAS) 
+        // ==========================================================================================
         {
             "Action": "EditData",
             "Target": "Data/TriggerActions",
             "Entries": {
                 "Miguel_Give_SummerSeeds": {
-                    "Trigger": "DayStarted", 
-                    "Condition": "Season:summer, Friendship:Miguel 250, !Mail:Miguel_SummerSeeds", // Verano + 1 Corazón + No haber recibido la carta antes
-                    "Action": "AddMail Current Miguel_SummerSeeds" // Acción: Enviar la carta
+                    "Id": "Miguel_Give_SummerSeeds",
+                    "Trigger": "DayStarted",
+                    "Condition": "SEASON summer, PLAYER_FRIENDSHIP_POINTS Current Miguel 250, !PLAYER_HAS_MAIL Current Miguel_SummerSeeds",
+                    "Action": "AddMail Current Miguel_SummerSeeds"
+                },
+                "Miguel_Trigger_Quest_Tech": {
+                    "Id": "Miguel_Trigger_Quest_Tech",
+                    "Trigger": "DayStarted",
+                   "Condition": "PLAYER_FRIENDSHIP_POINTS Current Miguel 750, !PLAYER_HAS_MAIL Current Miguel_Quest_Tech_Mail", 
+                   "Action": "AddMail Current Miguel_Quest_Tech_Mail"
                 }
             }
         },
@@ -296,7 +293,7 @@
             }
         },
 
-        // ==========================================================================================
+       // ==========================================================================================
         // 4. MAPAS Y CONEXIONES
         // ==========================================================================================
         { "Action": "Load", "Target": "Maps/MiguelRoom", "FromFile": "assets/Maps/MiguelRoom.tmx" },
@@ -310,12 +307,10 @@
                 "MiguelWoods": { "DisplayName": "Bosque de Miguel", "Type": "Outdoors", "CreateOnLoad": { "MapPath": "Maps/MiguelWoods" } }
             }
         },
-        
-        { "Action": "EditMap", "Target": "Maps/BusStop", "AddWarps": [ "22 9 MiguelWoods 43 25" ] },
+        { "Action": "EditMap", "Target": "Maps/BusStop", "AddWarps": [ "22 8 MiguelWoods 43 25" ] },
         { "Action": "EditMap", "Target": "Maps/MiguelWoods", "AddWarps": [ "43 24 BusStop 22 10", "48 14 MiguelRoom 6 9" ] },
         { "Action": "EditMap", "Target": "Maps/MiguelRoom", "AddWarps": [ "6 10 MiguelWoods 48 16" ] },
-
-        // ==========================================================================================
+         // ==========================================================================================
         // MISIONES (QUESTS) - 
         // ==========================================================================================
 
@@ -344,47 +339,28 @@
                 "Miguel_Trigger_Quest_Tech": {
                     "Id": "Miguel_Trigger_Quest_Tech", // El trigger de la quest
                     "Trigger": "DayStarted",
-                    "Condition": "Friendship:Miguel 750, !Mail:Miguel_Quest_Tech_Mail",
-                    "Action": "AddMail Current Miguel_Quest_Tech_Mail"
+                   "Condition": "PLAYER_FRIENDSHIP_POINTS Current Miguel 750, !PLAYER_HAS_MAIL Current Miguel_Quest_Tech_Mail", 
+                   "Action": "AddMail Current Miguel_Quest_Tech_Mail"
                 }
             }
         },
 
-        // 2. LA CARTA
-        {
-            "Action": "EditData",
-            "Target": "Data/Mail",
-            "Entries": {
-                
-                "Miguel_Quest_Tech_Mail": "Hola @,^Estoy trabajando en una mejora experimental para la infraestructura de red del valle, me lo ha encargado un tal 'Señor Kim' o algo así, un tío muy raro. Aunque ahora que lo pienso... Creo que me dijo que no contara nada, espero que no me parta los dedos... En fin, quiero probar una cosa, la teoría es sólida, pero es que lo he intentado con plata y semiconductores dopados y no lo consigo, revientan.^Necesito un metal que sea muy denso y resistente al calor, porque si no, el núcleo peta.^Sé que es mucho pedir, pero si encuentras Iridio, me vendría muy muy bien una barra.^   - Miguel%quest ProjectJerte.Quest.Superconductor %%"
-            }
-        },
-
-        // 3. EL trigger de la quest de iridio
-        {
-            "Action": "EditData",
-            "Target": "Data/TriggerActions",
-            "Entries": {
-                "Miguel_Trigger_Quest_Tech": {
-                    "Trigger": "DayStarted",
-                    "Condition": "Friendship:Miguel 750, !Mail:Miguel_Quest_Tech_Mail", // 3 Corazones
-                    "Action": "AddMail Current Miguel_Quest_Tech_Mail"
-                }
-            }
-        },
-
-        // 4. DIÁLOGO AL ENTREGAR EL IRIDIO
-       
-        {
-            "Action": "EditData",
-            "Target": "Characters/Dialogue/Miguel",
-            "Entries": {
-                "ItemDelivery_ProjectJerte.Quest.Superconductor": "¡¿Espera, de verdad?! ¿De verdad es Iridio puro? Dios, mira cómo brilla... @, con esto puedo hacer de todo. Esto es brutal.$h"
-            }
-        },
-
+      // ==========================================================================================
+        // EVENTOS DE RECOMPENSAS
         // ==========================================================================================
-        // 5. MENSAJES DEL MAPA (Mis textos sagrados)
+        {
+            "Action": "EditData",
+            "Target": "Data/Events/MiguelRoom",
+            "Entries": {
+                // 1. EVENTO SEMILLAS (Requiere: Verano + 1 Corazón)
+                "99112266/f Miguel 250/s summer": "none/3 5/farmer 3 9 0 Miguel 3 5 2/skippable/pause 500/speak Miguel \"¡Hola @!^Revisando entre mis cajas he encontrado esto.^Son semillas de Lúpulo de Indalia, una variedad de mi tierra. Yo no tengo espacio para plantarlas.^Tómalas, si las cuidas bien verás por qué son tan especiales.%item object ProjectJerte.SemillaIndalo 5 %%\"/end",
+                
+                // 2. EVENTO MISIÓN IRIDIO (Requiere: 3 Corazones)
+                "99112267/f Miguel 750": "none/3 5/farmer 3 9 0 Miguel 3 5 2/skippable/pause 500/speak Miguel \"¡@, justo a quien quería ver!^Estoy probando una mejora de red para un tipo que se llama 'Señor Kim' o algo así, pero lo intento con plata y la placa revienta.^Necesito un metal que sea extremadamente denso y resistente al calor...^Sé que es mucho pedir, pero si alguna vez consigues Iridio, me vendría genial una barrilla tonta.%quest ProjectJerte.Quest.Superconductor %%\"/end"
+            }
+        },
+        // ==========================================================================================
+        // 5. MENSAJES DEL MAPA 
         // ==========================================================================================
         {
             "Action": "EditMap",
@@ -414,14 +390,14 @@
             "Target": "Strings/StringsFromMaps",
             "Entries": {
                 "Miguel_mujer_cactus": "Borrador: Ella respondió que era inexpugnable, hiriente con la gente que quería estar cerca.^Él le comentó que no había que preocuparse, ya que no quería estar cerca, sino dentro y plantarse...^^Si ella era la esp..a ..... .......... ^ Ese gl.o ......................^pi.s d.l t.ies.o s..ar..a    ....... taron.. .v.sar ... ... ...... ............ ....    e.la n. era .an m.la ni él t.. .ob. , tan s.lo la m..e. c..tus y .l ..m.re gl..o",
-                "robotIA_1": "Es el prototipo 'Hansel Mk1'.#Le faltan las baterías y tiene una pegatina en la frente: 'Te vas a poner a discutirle sobre filosofía a la madre que te parió'.",
-                "telescopioMiguel": "Está apuntando hacia la ventana de Maru... No, espera.#Está apuntando a la constelación de Andrómeda. Hay anotaciones sobre coordenadas estelares, además de una imagen de la serie 'Érase una vez, el espacio'.",
-                "miguel_estante1": "Crítica a la razón pura, de Immanuel Kant, detrás hay libros de Dostoyevski y sobre todo, de Spinoza.#Entre ellos hay un libro de... ¿Pokémon?: 'Por qué la cuarta generación es la mejor de todas, por Knekro'... ¿Quién es Knekro?",
-                "estante2": "Está llena de componentes electrónicos y cables enredados... ¿Eso es un cuchillo?.",
+                "robotIA_1": "Es el prototipo 'Hansel Mk1'.#Le faltan las baterías y tiene una pegatina en la frente: 'Te vas a poner a discutirle a la madre que te parió'.",
+                "telescopioMiguel": "Está apuntando hacia la ventana de Maru... Ah no, espera.#Está apuntando a la constelación de Andrómeda. Hay anotaciones sobre coordenadas estelares, además de una imagen de la serie 'Érase una vez, el espacio'.",
+                "miguel_estante1": "Crítica a la razón pura, de Kant, detrás hay libros de Escohotado y Spinoza.#Entre ellos hay un libro de... ¿Pokémon?: 'Por qué la cuarta generación es la mejor de todas, por Knekro'... ¿Quién hostias es Knekro?",
+                "estante2": "Está llena de notas arrugadas y cables enredados... ¿Eso es un cuchillo?.",
                 "estante3": "Libros de historia moderna y logística, te llama la atención un libro titulado 'Por qué es importante regar el cemento' de 2002.",
-                "ordenadorFrecuencias": "La pantalla muestra ondas de radio en tiempo real.#Está escaneando frecuencias locales. Hay un post-it: '¿Por qué el osciloscopio va peor cuando llueve? Preguntar a J...a'.",
+                "ordenadorFrecuencias": "La pantalla muestra ondas de radio en tiempo real.#Está escaneando frecuencias locales. Hay un post-it: '¿Por qué el osciloscopio va peor cuando llueve? Preguntar a J...a'.#Espera... ¿Dónde está conectado?",
                 "jaulaAlvin": "Aquí vive Alvin, la cobaya de Miguel.#Está royendo una figura de madera vieja de un bombardero alemán. Parece feliz.#En el cartel pone: 'No le pongas el dedo, por el amor de dios'.",
-                "ordenadorMiguel": "El salvapantallas es una lluvia de código verde.#Hay una pestaña del navegador abierta: 'Final de la Copa Mundial de Tetris, 2023'#Este tío está de la olla..."
+                "ordenadorMiguel": "Miguel se ha dejado el ordenador desbloqueado, no parece trabajo... #Jum... parece que está programando algo raro, está haciendo un dibujo, se llama... 'Alfie.png'#Este tío está de la olla..."
             }
         },
 
@@ -443,9 +419,11 @@
                 // 0: Diálogo AMAR / 1: Items AMAR / 2: Items GUSTAR / 3: Items DISGUSTAR / 4: Items ODIAR / 5: Items NEUTRAL
                 // 6: Diálogo GUSTAR / 7: Diálogo DISGUSTAR / 8: Diálogo ODIAR / 9: Diálogo NEUTRAL
                 
-                "Miguel": "¡Bua! ¿En serio? ¡Justo lo que necesitaba!$h#$b#Me conoces demasiado bien, @. Muchísimas gracias.$h/ProjectJerte.CervezaAlhambra ProjectJerte.LupuloIndalo TortaDelCasar Migas 395 253 787/-2 -7 -26 -75 -79 -80 -81/ /167 168 169 170 171 172/ /¡Anda! Muchas gracias. Tiene muy buena pinta.$h/¿Esto? Bueno... gracias por la intención./¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Gracias por la intención, supongo./Gracias."
+                "Miguel": "¡Buah! ¿En serio? ¡Justo lo que necesitaba!$h#$b#Me conoces muy bien, @. Muchísimas gracias.$h/ProjectJerte.CervezaAlhambra ProjectJerte.LupuloIndalo TortaDelCasar Migas 395 253 787/-2 -7 -26 -75 -79 -80 -81/ /167 168 169 170 171 172/ /¡Anda! Muchas gracias. Tiene muy buena pinta.$h/¿Esto? Bueno... gracias por la intención./¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Gracias por la intención, supongo./Gracias."
             }
         },
+       
+
 
         // ==========================================================================================
         // 2. DIÁLOGO DE CUMPLEAÑOS (Se pone aquí, no en GiftTastes, rarete)
@@ -455,7 +433,7 @@
             "Target": "Characters/Dialogue/Miguel",
             "Entries": {
                 // El juego busca automáticamente la clave "BirthdayGift" cuando le doy un regalo en su cumple.
-                "BirthdayGift": "¡Anda! ¿Te has acordado de mi cumple?$h#$b#Normalmente se me olvida hasta a mí entre tanto código. Eres increíble, me alegro de tenerte a mi lado @.$h"
+                "BirthdayGift": "¡Anda! ¿Te has acordado de mi cumple?$h#$b#Normalmente se me olvida hasta a mí... Eres increíble, gracias @.$h"
             }
         },
         // ==========================================================================================
@@ -465,9 +443,12 @@
             "Action": "EditData",
             "Target": "Data/animationDescriptions",
             "Entries": {
-              "Miguel_Typing": "4 100 5 100 6 100 7 100/true"
+              "Miguel_Typing": "4 100 5 100 6 100 7 100",
+                "Miguel_SitEast" : "16"
             }
         },
+        
+
         // ==========================================================================================
         // 6. NPC MIGUEL (DATOS Y GUSTOS)
         // ==========================================================================================
@@ -516,7 +497,7 @@
             "Action": "EditData",
             "Target": "Data/Events/Farm",
             "Entries": {
-                "99112233/f Miguel 500/t 600 1000/w sunny": "none/-1000 -1000/farmer 64 15 3 Miguel 64 16 0/skippable/pause 1000/speak Miguel \"¡Hola, @!^¿Qué tal estás?.\"/pause 400/speak Miguel \"Ya conoces a Alvin, mi cobaya, ¿verdad? Pues bueno, resulta que ahora tiene un hermanito.\"/speak Miguel \"Ya no tengo espacio en mi habitación con Alvin corriendo por ahí, así que he pensado que quizá te gustaría a ti tenerlo.\" #$b#He pensado que quizás Alfie estaría mejor contigo./pause 500/emote Miguel 20/speak Miguel \"¡Genial! Sabía que os llevarais bien.\"/playSound dwop/emote Miguel 20/speak Miguel \"¡Cuídalo mucho! Le encantan las zanahorias.\"/pause 500/speak Miguel \"Lo he dejado con Marnie, le está poniendo unas vacunas, espero que no se ponga nervioso... Pásate por su tienda y podrás recogerlo gratis, ya está todo el papeleo hecho.\"/move Miguel 0 1 3/end"
+                "99112233/f Miguel 500/t 600 1000/w sunny": "none/-1000 -1000/farmer 64 15 3 Miguel 64 16 0/skippable/pause 1000/speak Miguel \"¡Hola, @!^¿Qué tal estás?\"/pause 400/speak Miguel \"Ya conoces a Alvin, mi cobaya, ¿verdad? Pues bueno, resulta que ahora tiene un hermanito.\"/speak Miguel \"Ya no tengo espacio en mi habitación con Alvin corriendo por ahí, así que he pensado que quizá te gustaría a ti tenerlo.\" #$b#He pensado que quizás Alfie estaría mejor contigo./pause 500/emote Miguel 20/speak Miguel \"¡Genial! Sabía que os llevaríais bien.\"/playSound dwop/emote Miguel 20/speak Miguel \"¡Cuídalo mucho! Le encantan las zanahorias.\"/pause 500/speak Miguel \"Lo he dejado con Marnie, le está poniendo unas vacunas, espero que no se ponga nervioso... Pásate por su tienda y podrás recogerlo gratis, ya está todo el papeleo hecho. [DEBUG: Necesitas tener la afinidad al máximo con tu mascota]\"/move Miguel 0 1 3/end"
             }
         },
 
@@ -537,9 +518,7 @@
             "Action": "EditData",
             "Target": "Data/Events/BusStop",
             "Entries": {
-               
-                "99112244/f Miguel 0/t 600 1600/w sunny": "none/22 10/farmer 23 17 0 Miguel 22 10 0 Gus 21 10 0/skippable/pause 1000/speak Miguel \"...entonces si redirijo el flujo de datos por el nodo auxiliar...\"/pause 500/speak Gus \"Miguel, ¿estás seguro de que esto es seguro? No quiero que el autobús acabe en una cuneta...\"/emote Miguel 12/speak Miguel \"¡Tranquilo, Gus! Es solo un bypass del protocolo de enlace.\"/move farmer 0 -4 0 -1 0 0/emote Gus 16/faceDirection Gus 2/speak Gus \"Vaya friki... ¡Ah! ¡Mira quién viene!\"/pause 400/faceDirection Miguel 2/speak Gus \"@, qué alegría verte. Te presento a mi primo, Miguel. Acaba de mudarse al valle.\"/move Miguel 0 1 2/speak Miguel \"Hola! Soy Miguel, trabajo para una empresa de Indalia en remoto, me he venido a vivir al valle con Gus, no me termina de gustar el ajetreo de la ciudad.\"/pause 400/speak Miguel \"Ahora vivo en una pequeña cabaña en el bosque, al oeste del pueblo. Aunque no mando bombas a universidades ni nada de eso como Kazcynsky.\"/emote Gus 16/shake Gus 500/speak Gus \"¡Miguel! ¡Por favor!\"/speak Miguel \"Solo aclaraba... El caso es que el camino es un infierno de zarzas, así que he convencido a Lewis para que me deje instalar un aparatito que he hecho en vuestro bus.^ Ahora el bus tiene un piloto automático, si te subes sin darle al ordenador ese de la izquierda, te lleva derechita hasta la cabaña.\"/speak Gus \"Tan solo, ten cuidado...\"/emote Miguel 20/speak Miguel \"No prometo nada. En fin, @, el sistema ya debería ir bien. Si te aburres, pásate por allí. La verdad que la cabaña ha quedado bien, Robin vale su peso en oro.\"/end"
-            }
+                "99112244/f Miguel 0/t 600 1200/w sunny": "none/22 10/farmer 23 17 0 Miguel 22 10 0 Gus 21 10 0/skippable/pause 1000/speak Miguel \"...entonces si redirijo el flujo de datos por el nodo auxiliar...\"/pause 500/speak Gus \"Miguel, ¿estás convencido de que esto es seguro? No quiero que el autobús acabe en una cuneta...\"/emote Miguel 12/speak Miguel \"¡Tranquilo, Gus! Es solo un bypass del protocolo de enlace.\"/move farmer 0 -4 0 -1 0 0/emote Gus 16/faceDirection Gus 2/speak Gus \"Vaya friki... ¡Ah! ¡Mira quién viene!\"/pause 400/faceDirection Miguel 2/speak Gus \"@, qué alegría verte. Te presento a mi primo, Miguel. Acaba de mudarse al valle.\"/move Miguel 0 1 2/speak Miguel \"Hola! Soy Miguel, trabajo para una empresa de Indalia en remoto, me he venido a vivir al valle con Gus, no me termina de gustar el ajetreo de la ciudad.\"/pause 400/speak Miguel \"Ahora vivo en una pequeña cabaña en el bosque, al oeste del pueblo. Aunque no mando bombas a universidades ni nada de eso como Kazcynsky.\"/emote Gus 16/shake Gus 500/speak Gus \"¡Miguel! ¡Por favor!\"/speak Miguel \"Solo aclaraba... El caso es que el camino es un infierno de zarzas, así que he convencido a Lewis para que me deje instalar un aparatito que he hecho en vuestro bus.^ Ahora el bus tiene un piloto automático, si te subes sin darle al ordenador ese de la izquierda, te lleva derechita hasta la cabaña.\"/speak Gus \"Tan solo, ten cuidado...\"/emote Miguel 20/speak Miguel \"No prometo nada. En fin, @, el sistema ya debería ir bien. Si te aburres, pásate por allí. La verdad que la cabaña ha quedado bien, Robin vale su peso en oro.\"/end"}
         },
         // ==========================================================================================
         // 8. FESTIVALES

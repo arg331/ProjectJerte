@@ -332,11 +332,11 @@
         { "Action": "Load", "Target": "Characters/Dialogue/Miguel", "FromFile": "assets/Characters/Miguel/dialogue.json" },
         { "Action": "Load", "Target": "Characters/Schedules/Miguel", "FromFile": "assets/Characters/Miguel/schedule.json" },
 
-        {
+       {
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Entries": {
-                "Miguel": "¡Buah! ¿En serio? ¡Justo lo que necesitaba!$h#$b#Me conoces muy bien, @. Muchísimas gracias.$h/ProjectJerte.CervezaAlhambra ProjectJerte.LupuloIndalo TortaDelCasar Migas 395 253 787/-2 -7 -26 -75 -79 -80 -81/ /167 168 169 170 171 172/ /¡Anda! Muchas gracias. Tiene muy buena pinta.$h/¿Esto? Bueno... gracias por la intención./¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Gracias por la intención, supongo./Gracias."
+                "Miguel": "¡Buah! ¿En serio? ¡Justo lo que necesitaba!$h#$b#Me conoces muy bien, @. Muchísimas gracias.$h/ProjectJerte.CervezaAlhambra ProjectJerte.LupuloIndalo TortaDelCasar Migas 395 253 787/¡Anda! Muchas gracias. Tiene muy buena pinta.$h/-2 -7 -26 -75 -79 -80 -81/¿Esto? Bueno... gracias por la intención./-4 -28/¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Qué asco... Gracias por la intención, supongo./167 168 169 170 171 172/Gracias./ "
             }
         },
         {

@@ -1,0 +1,208 @@
+{
+    "Changes": [
+       {
+            "LogName": "Load Project Jerte Master Tilesheet",
+            "Action": "Load",
+            "Target": "Mods/ProjectJerte/ObjetosMaestros",
+            "FromFile": "assets/items/ItemsProjectJerte.png"
+        },
+        {
+            "LogName": "Load Alfie Pet Sprite",
+            "Action": "Load",
+            "Target": "Mods/ProjectJerte/AlfiePetSprite", 
+            "FromFile": "assets/Animals/Alfie/alfie_1.png"
+        },
+   {
+            "LogName": "Objects Data",
+            "Action": "EditData",
+            "Target": "Data/Objects",
+            "Entries": {
+             
+                "ProjectJerte.LupuloIndalo": {
+                    "Name": "Lúpulo de Indalia",
+                    "DisplayName": "Lúpulo de Indalia",
+                    "Description": "Una variedad especial traída del sur. Es la clave de la cerveza favorita de Miguel.",
+                    "Type": "Basic",
+                    "Category": -75,
+                    "Price": 60,
+                    "Edibility": 20,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 0,
+                    "ContextTags": [ "color_green", "season_summer" ]
+                },
+                
+                "ProjectJerte.SemillaIndalo": {
+                    "Name": "Semillas de Indalia",
+                    "DisplayName": "Semillas de Lúpulo de Indalia",
+                    "Description": "Plántalas en verano. Tardan 11 días en crecer. Crecen en espaldera.",
+                    "Type": "Seeds",
+                    "Category": -74,
+                    "Price": 60,
+                    "Edibility": -300,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 1,
+                    "ContextTags": [ "color_brown" ]
+                },
+                
+                "ProjectJerte.CervezaAlhambra": {
+                    "Name": "Cerveza Especial",
+                    "DisplayName": "Cerveza Alhambra 1925",
+                    "Description": "Cerveza estilo Alhambra 1925, no te tomes más de dos, no vaya a ser que acabes en el cuarto del alcalde...",
+                    "Type": "Cooking",
+                    "Category": -26,
+                    "Price": 500,
+                    "Edibility": 60,
+                    "IsDrink": true,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 2,
+                    "ContextTags": [ "color_green", "brew_item" ],
+                    "Buffs": [ 
+                        { 
+                            "BuffId": "Tipsy", 
+                            "Duration": 360, 
+                            "CustomAttributes": { "LuckLevel": 5, "Speed": -1 } 
+                        } 
+                    ]
+                },
+                
+                "TortaDelCasar": {
+                    "Name": "Torta del Casar",
+                    "DisplayName": "Torta del Casar",
+                    "Description": "Huele que alimenta, a Julia le encanta :).",
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Price": 450,
+                    "Edibility": 150,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 3,
+                    "ContextTags": [ "color_light_yellow", "cheese_item" ],
+                    "BuffDuration": 400,
+                    "Buffs": [ { "BuffId": "Defense", "Value": 3 }, { "BuffId": "Luck", "Value": 1 } ]
+                },
+                
+                "Migas": {
+                    "Name": "Migas",
+                    "DisplayName": "Migas Extremeñas",
+                    "Description": "Platazo de la cocina de Iberia, gusta en todo el mundo. En Indalia, se hacen cuando llueve.",
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Price": 250,
+                    "Edibility": 100,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 4,
+                    "ContextTags": [ "color_orange", "comfort_food" ],
+                    "BuffDuration": 360,
+                    "Buffs": [ { "BuffId": "Farming", "Value": 2 }, { "BuffId": "Foraging", "Value": 2 } ]
+                },
+                
+                "ProjectJerte.Perrunilla": {
+                    "Name": "Perrunilla",
+                    "DisplayName": "Perrunilla",
+                    "Description": "Dulce tradicional del convento. Hecha con almendras locales. Se deshace en la boca.",
+                    "Type": "Cooking",
+                    "Category": -7,
+                    "Price": 200,
+                    "Edibility": 50,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 5,
+                    "ContextTags": [ "color_light_brown", "dessert_item" ],
+                    "Buffs": [ 
+                        { "BuffId": "Speed", "Value": 1, "Duration": 240 }, 
+                        { "BuffId": "MaxEnergy", "Value": 30, "Duration": 240 } 
+                    ] 
+                },
+                "ProjectJerte.BufandaHarry": {
+                    "Name": "Bufanda Extraña",
+                    "DisplayName": "Bufanda Extraña",
+                    "Description": "Una bufanda a rayas rojas y doradas que te regaló Miguel. Te hace sentir que puedes enfrentarte a cualquier cosa.",
+                    "Type": "Ring",
+                    "Category": -96,
+                    "Price": 2000,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 6,
+                    "Edibility": -300,
+                    "ContextTags": [ "color_red" ]
+                }
+            }
+        },
+
+         {
+            "LogName": "Weapons Data",
+            "Action": "EditData",
+            "Target": "Data/Weapons",
+            "Entries": {
+                "ProjectJerte.EspadaGryffindor": {
+                    "Name": "Espada de Gryffindor",
+                    "DisplayName": "Espada de Gryffindor",
+                    "Description": "Una reliquia legendaria que te regaló Miguel. Es de plata impregnada en veneno de basilisco. Sólo aparece ante un verdadero valiente.",
+                    "MinDamage": 100,
+                    "MaxDamage": 200,
+                    "Knockback": 1.5,
+                    "Speed": 4,
+                    "Precision": 0,
+                    "Defense": 5,
+                    "Type": 3,
+                    "CritChance": 0.20,
+                    "CritMultiplier": 5,
+                    "Texture": "Mods/ProjectJerte/ObjetosMaestros",
+                    "SpriteIndex": 7
+                }
+            }
+        },
+
+          {
+            "LogName": "Machines Data - Seed Maker",
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC)25", "OutputRules" ],
+            "Entries": {
+                "ProjectJerte.Rule_SeedMaker_Indalo": {
+                    "Id": "ProjectJerte.Rule_SeedMaker_Indalo",
+                    "Triggers": [ { "Id": "Input", "RequiredItemId": "ProjectJerte.LupuloIndalo", "Count": 1 } ],
+                    "OutputItem": [ { "ItemId": "ProjectJerte.SemillaIndalo", "MinStack": 1, "MaxStack": 3, "ProcessingTime": 20 } ]
+                }
+            }
+        },
+        {
+            "LogName": "Machines Data - Keg",
+            "Action": "EditData",
+            "Target": "Data/Machines",
+            "TargetField": [ "(BC)12", "OutputRules" ],
+            "Entries": {
+                "ProjectJerte.Rule_Alhambra": {
+                    "Id": "ProjectJerte.Rule_Alhambra",
+                    "Triggers": [ { "Id": "Input", "RequiredItemId": "ProjectJerte.LupuloIndalo", "Count": 1 } ],
+                    "OutputItem": [ { "ItemId": "ProjectJerte.CervezaAlhambra", "MinStack": 1, "MaxStack": 1, "ProcessingTime": 2250 } ]
+                }
+            }
+        },
+
+          {
+            "LogName": "Crops Data",
+            "Action": "EditData",
+            "Target": "Data/Crops",
+            "Entries": {
+                "ProjectJerte.SemillaIndalo": {
+                    "Seasons": [ "summer" ],
+                    "DaysInPhase": [ 1, 2, 2, 3, 3 ],
+                    "RegrowDays": 1,
+                    "IsRaised": true,
+                    "HarvestItemId": "ProjectJerte.LupuloIndalo", 
+                    "Texture": "TileSheets\\crops", 
+                    "SpriteIndex": 16
+                }
+            }
+        },
+
+         {
+            "LogName": "Cooking Recipes Data",
+            "Action": "EditData",
+            "Target": "Data/CookingRecipes",
+            "Entries": {
+                "Torta del Casar": "186 1/f Miguel 3/TortaDelCasar/default/Torta del Casar",
+                "Migas": "216 1 247 1/f Miguel 5/Migas/default/Migas Extremeñas",
+                "Perrunilla": "246 1 245 1 309 1/f Miguel 3/ProjectJerte.Perrunilla/default/Perrunilla"
+            }
+        }
+    ]
+}

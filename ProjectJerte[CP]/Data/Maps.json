@@ -1,4 +1,5 @@
 {
+    
     "Changes": [
         // ==========================================================================================
         // CARGA FÍSICA DE MAPAS (Archivos TMX)
@@ -37,7 +38,7 @@
             }
         },
 
-        // ==========================================================================================
+       // ==========================================================================================
         // WARPS
         // ==========================================================================================
         {
@@ -45,7 +46,7 @@
             "Action": "EditMap",
             "Target": "Maps/BusStop",
             "AddWarps": [
-                "22 8 MiguelWoods 43 26"
+                "22 9 MiguelWoods 43 25" 
             ]
         },
         {
@@ -101,7 +102,7 @@
             "Action": "EditData",
             "Target": "Strings/StringsFromMaps",
             "Entries": {
-                "Miguel_mujer_cactus": "Borrador: Ella respondió que era inexpugnable, hiriente con la gente que quería estar cerca.^Él le comentó que no había que preocuparse, ya que no quería estar cerca, sino dentro y plantarse...^^Si ella era la esp..a ..... .......... ^ Ese gl.o ......................^pi.s d.l t.ies.o s..ar..a    ....... taron.. .v.sar ... ... ...... ............ ....    e.la n. era .an m.la ni él t.. .ob. , tan s.lo la m..e. c..tus y .l ..m.re gl..o",
+                "Miguel_mujer_cactus": "Borrador: Ella respondió que era inexpugnable, hiriente con la gente que quería estar cerca.^Él le comentó que no había que preocuparse, ya que no quería estar cerca, sino dentro y plantarse...^^Si ella era la esp..a ..... .......... ^ Ese gl.o ......................^pi.s d.l t.ies.o s..ar..a    ....... taron.. .v.sar ... ... ...... ............ ....  e.la n. era .an m.la ni él t.. .ob. , tan s.lo la m..e. c..tus y .l ..m.re gl..o",
                 "robotIA_1": "Es el prototipo 'Hansel Mk1'.#Le faltan las baterías y tiene una pegatina en la frente: 'Te vas a poner a discutirle a la madre que te parió'.",
                 "telescopioMiguel": "Está apuntando hacia la ventana de Maru... Ah no, espera.#Está apuntando a la constelación de Andrómeda. Hay anotaciones sobre coordenadas estelares, además de una imagen de la serie 'Érase una vez, el espacio'.",
                 "miguel_estante1": "Crítica a la razón pura, de Kant, detrás hay libros de Escohotado y Spinoza.#Entre ellos hay un libro de... ¿Pokémon?: 'Por qué la cuarta generación es la mejor de todas, por Knekro'... ¿Quién hostias es Knekro?",

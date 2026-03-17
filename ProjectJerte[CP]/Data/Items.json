@@ -1,6 +1,6 @@
 {
     "Changes": [
-       {
+        {
             "LogName": "Load Project Jerte Master Tilesheet",
             "Action": "Load",
             "Target": "Mods/ProjectJerte/ObjetosMaestros",
@@ -12,16 +12,15 @@
             "Target": "Mods/ProjectJerte/AlfiePetSprite", 
             "FromFile": "assets/Animals/Alfie/alfie_1.png"
         },
-   {
+        {
             "LogName": "Objects Data",
             "Action": "EditData",
             "Target": "Data/Objects",
             "Entries": {
-             
                 "ProjectJerte.LupuloIndalo": {
                     "Name": "Lúpulo de Indalia",
                     "DisplayName": "Lúpulo de Indalia",
-                    "Description": "Una variedad especial traída del sur. Es la clave de la cerveza favorita de Miguel.",
+                    "Description": "Una variedad especial traída del sur. Es la clave de la cerveza favorita de Miguel. ¡Bebe con moderación!",
                     "Type": "Basic",
                     "Category": -75,
                     "Price": 60,
@@ -30,7 +29,6 @@
                     "SpriteIndex": 0,
                     "ContextTags": [ "color_green", "season_summer" ]
                 },
-                
                 "ProjectJerte.SemillaIndalo": {
                     "Name": "Semillas de Indalia",
                     "DisplayName": "Semillas de Lúpulo de Indalia",
@@ -43,7 +41,6 @@
                     "SpriteIndex": 1,
                     "ContextTags": [ "color_brown" ]
                 },
-                
                 "ProjectJerte.CervezaAlhambra": {
                     "Name": "Cerveza Especial",
                     "DisplayName": "Cerveza Alhambra 1925",
@@ -64,11 +61,10 @@
                         } 
                     ]
                 },
-                
                 "TortaDelCasar": {
                     "Name": "Torta del Casar",
                     "DisplayName": "Torta del Casar",
-                    "Description": "Huele que alimenta, a Julia le encanta :).",
+                    "Description": "Huele que alimenta, a Julia le encanta :)",
                     "Type": "Cooking",
                     "Category": -7,
                     "Price": 450,
@@ -79,7 +75,6 @@
                     "BuffDuration": 400,
                     "Buffs": [ { "BuffId": "Defense", "Value": 3 }, { "BuffId": "Luck", "Value": 1 } ]
                 },
-                
                 "Migas": {
                     "Name": "Migas",
                     "DisplayName": "Migas Extremeñas",
@@ -94,11 +89,10 @@
                     "BuffDuration": 360,
                     "Buffs": [ { "BuffId": "Farming", "Value": 2 }, { "BuffId": "Foraging", "Value": 2 } ]
                 },
-                
                 "ProjectJerte.Perrunilla": {
                     "Name": "Perrunilla",
                     "DisplayName": "Perrunilla",
-                    "Description": "Dulce tradicional del convento. Hecha con almendras locales. Se deshace en la boca.",
+                    "Description": "Dulce tradicional de la cocina de Iberia. Hecha con almendras locales. Se deshace en la boca.",
                     "Type": "Cooking",
                     "Category": -7,
                     "Price": 200,
@@ -121,20 +115,22 @@
                     "Texture": "Mods/ProjectJerte/ObjetosMaestros",
                     "SpriteIndex": 6,
                     "Edibility": -300,
-                    "ContextTags": [ "color_red" ]
+                    "ContextTags": [ "color_red" ],
+                    "CustomFields": {
+                        "Buffs": "Luck 1" 
+                    }
                 }
             }
         },
-
-         {
+        {
             "LogName": "Weapons Data",
             "Action": "EditData",
             "Target": "Data/Weapons",
             "Entries": {
-                "ProjectJerte.EspadaGryffindor": {
+                "ProjectJerte.EspadaMiguel": {
                     "Name": "Espada de Gryffindor",
                     "DisplayName": "Espada de Gryffindor",
-                    "Description": "Una reliquia legendaria que te regaló Miguel. Es de plata impregnada en veneno de basilisco. Dícese que solo aparece ante un verdadero valiente.",
+                    "Description": "Una reliquia legendaria que te regaló Miguel. Es de plata impregnada en veneno de... ¿Basilisco?. Dícese que solo aparece ante un verdadero valiente.",
                     "MinDamage": 100,
                     "MaxDamage": 200,
                     "Knockback": 1.5,
@@ -149,8 +145,7 @@
                 }
             }
         },
-
-          {
+        {
             "LogName": "Machines Data - Seed Maker",
             "Action": "EditData",
             "Target": "Data/Machines",
@@ -176,8 +171,7 @@
                 }
             }
         },
-
-          {
+        {
             "LogName": "Crops Data",
             "Action": "EditData",
             "Target": "Data/Crops",
@@ -193,8 +187,7 @@
                 }
             }
         },
-
-         {
+        {
             "LogName": "Cooking Recipes Data",
             "Action": "EditData",
             "Target": "Data/CookingRecipes",

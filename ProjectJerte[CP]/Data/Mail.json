@@ -1,0 +1,13 @@
+{
+    "Changes": [
+        {
+            "LogName": "Cartas de los Regalos de Miguel",
+            "Action": "EditData",
+            "Target": "Data/Mail",
+            "Entries": {
+                "Miguel_SwordMail": "¿Te lo pasaste bien ayer? Creo que las palomitas me quedaron un poquillo saladas de más, pero bueno.^He seguido con las cajas de la mudanza, y me he encontrado una espada. Algo me dice que estaría mejor contigo, estaba debajo de un sombrero viejo un poco extraño...^En fin, ¡seguro que le sacas más partido que yo!^  - Miguel %item id (W)ProjectJerte.EspadaMiguel 1 %%",
+                "Miguel_BufandaMail": "Ey @!, sé que te gusta mucho la saga que estuvimos viendo el otro día, así que le he pedido a Emily que me enseñe a coser por mantenerme haciendo cosillas nuevas.^Me he pinchado no sé cuántas veces sin querer, pero creo que me ha quedado bonita.^Espero que te ayude :)^  - Miguel %item object ProjectJerte.BufandaHarry 1 %%"
+            }
+        }
+    ]
+}

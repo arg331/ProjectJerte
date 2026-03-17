@@ -34,6 +34,19 @@
                 }
             }
         },
+        {
+            "LogName": "Trigger para enviar la Bufanda",
+            "Action": "EditData",
+            "Target": "Data/TriggerActions",
+            "Entries": {
+                "Miguel_Send_Bufanda_Mail": {
+                    "Id": "Miguel_Send_Bufanda_Mail",
+                    "Trigger": "DayStarted",
+                    "Condition": "PLAYER_HAS_SEEN_EVENT Current 99112266, FRIENDSHIP_HEARTS Current Miguel 7, !PLAYER_HAS_MAIL Current Miguel_BufandaMail", 
+                    "Action": "AddMail Current Miguel_BufandaMail"
+                }
+            }
+        },
 
         // ==========================================================================================
         // EVENTOS Y CINEMÁTICAS
@@ -60,6 +73,15 @@
             "Target": "Data/Events/Farm",
             "Entries": {
                 "99112233/f Miguel 500/t 600 1000/w sunny": "none/-1000 -1000/farmer 64 15 3 Miguel 64 16 0/skippable/pause 1000/speak Miguel \"¡Hola, @!^¿Qué tal estás?\"/pause 400/speak Miguel \"Ya conoces a Alvin, mi cobaya, ¿verdad? Pues bueno, resulta que ahora tiene un hermanito.\"/speak Miguel \"Ya no tengo espacio en mi habitación con Alvin corriendo por ahí, así que he pensado que quizá te gustaría a ti tenerlo.\" #$b#He pensado que quizás Alfie estaría mejor contigo./pause 500/emote Miguel 20/speak Miguel \"¡Genial! Sabía que os llevaríais bien.\"/playSound dwop/emote Miguel 20/speak Miguel \"¡Cuídalo mucho! Le encantan las zanahorias.\"/pause 500/speak Miguel \"Lo he dejado con Marnie, le está poniendo unas vacunas, espero que no se ponga nervioso... Pásate por su tienda y podrás recogerlo gratis, ya está todo el papeleo hecho. [DEBUG: Necesitas tener la afinidad al máximo con tu mascota]\"/move Miguel 0 1 3/end"
+            }
+        },
+        {
+            "LogName": "Evento de las Pelis y Palomitas",
+            "Action": "EditData",
+            "Target": "Data/Events/MiguelRoom",
+            "Entries": {
+                // ID: 99112266 / 6 Corazones / Entre las 18:00 y las 23:50
+                "99112266/f Miguel 1500/t 1800 2350": "none/-1000 -1000/farmer 4 9 0 Miguel 2 8 2/skippable/pause 500/speak Miguel \"¡Ey @!!, qué casualidad que hayas venido.^Resulta que estoy aún con las cajas de la mudanza y me he encontrado unas viejas pelis de un aprendiz de mago. Acabo de hacer palomitas y me iba a poner a verla, ¿te apetece quedarte?\"/pause 500/fade/viewport -1000 -1000/pause 2000/message \"Pasáis un buen rato viendo películas de magos y comiendo palomitas...\"/pause 2000/end"
             }
         },
         {

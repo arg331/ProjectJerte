@@ -1,0 +1,125 @@
+{
+    "Changes": [
+        // ==========================================================================================
+        // DATOS BÁSICOS DEL NPC (MIGUEL)
+        // ==========================================================================================
+        {
+            "LogName": "Miguel Character Base Data",
+            "Action": "EditData",
+            "Target": "Data/Characters",
+            "Entries": {
+                "Miguel": {
+                    "Name": "Miguel",
+                    "DisplayName": "Miguel",
+                    "Age": "Adult",
+                    "Manner": "Polite",
+                    "SocialAnxiety": "Outgoing",
+                    "Optimism": "Positive",
+                    "Gender": "Male",
+                    "Datable": true,
+                    "HomeRegion": "Town",
+                    "BirthSeason": "Summer",
+                    "BirthDay": 10,
+                    "FriendsAndFamily": { "Gus": "cousin" },
+                    "DefaultMap": "MiguelRoom",
+                    "DefaultPosition": "3 5"
+                }
+            }
+        },
+
+        // ==========================================================================================
+        // CARGA DE SPRITES, RETRATOS, DIÁLOGOS Y HORARIOS
+        // ==========================================================================================
+        { "LogName": "Load Miguel Portraits", "Action": "Load", "Target": "Portraits/Miguel", "FromFile": "assets/Characters/Miguel/miguel_portrait_neutro.png" },
+        { "LogName": "Load Miguel Sprites", "Action": "Load", "Target": "Characters/Miguel", "FromFile": "assets/Characters/Miguel/miguel_sprite.png" },
+        { "LogName": "Load Miguel Dialogue", "Action": "Load", "Target": "Characters/Dialogue/Miguel", "FromFile": "assets/Characters/Miguel/dialogue.json" },
+        { "LogName": "Load Miguel Schedule", "Action": "Load", "Target": "Characters/Schedules/Miguel", "FromFile": "assets/Characters/Miguel/schedule.json" },
+
+        // ==========================================================================================
+        // GUSTOS DE REGALOS Y DIÁLOGOS EXTRA
+        // ==========================================================================================
+        {
+            "LogName": "Miguel Gift Tastes",
+            "Action": "EditData",
+            "Target": "Data/NPCGiftTastes",
+            "Entries": {
+                "Miguel": "¡Buah! ¿En serio? ¡Justo lo que necesitaba!$h#$b#Me conoces muy bien, @. Muchísimas gracias.$h/ProjectJerte.CervezaAlhambra ProjectJerte.LupuloIndalo TortaDelCasar Migas 395 253 787/¡Anda! Muchas gracias. Tiene muy buena pinta.$h/-2 -7 -26 -75 -79 -80 -81/¿Esto? Bueno... gracias por la intención./-4 -28/¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Qué asco... Gracias por la intención, supongo./167 168 169 170 171 172/Gracias./ "
+            }
+        },
+        {
+            "LogName": "Miguel Birthday Reaction",
+            "Action": "EditData",
+            "Target": "Characters/Dialogue/Miguel",
+            "Entries": {
+                "BirthdayGift": "¡Anda! ¿Te has acordado de mi cumple?$h#$b#Normalmente se me olvida hasta a mí... Eres increíble, gracias @.$h"
+            }
+        },
+
+        // ==========================================================================================
+        // ANIMACIONES PERSONALIZADAS
+        // ==========================================================================================
+        {
+            "LogName": "Miguel Custom Animations",
+            "Action": "EditData",
+            "Target": "Data/animationDescriptions",
+            "Entries": {
+              // He eliminado "Miguel_Typing" para que no crashee. (03/03/26)
+              // Dejo "Miguel_SitEast" por si acaso el sprite sí tiene el frame 16.
+              "Miguel_SitEast" : "16"
+            }
+        },
+
+        // ==========================================================================================
+        // MASCOTA (ALFIE)
+        // ==========================================================================================
+        {
+            "LogName": "Add Pet: Alfie (Cobaya)",
+            "Action": "EditData",
+            "Target": "Data/Pets",
+            "Entries": {
+                "ProjectJerte.Cobaya": {
+                    "Id": "ProjectJerte.Cobaya",
+                    "DisplayName": "Cobaya",
+                    "DisplayType": "Cobaya",
+                    "BarkSound": "dwop", 
+                    "ContentSound": "dwop",
+                    "MoveSpeed": 2, 
+                    "Breeds": [
+                        {
+                            "Id": "Alfie",
+                            "Texture": "Mods/ProjectJerte/AlfiePetSprite", 
+                            "IconTexture": "Mods/ProjectJerte/AlfiePetSprite",
+                            "IconSourceRect": { "X": 8, "Y": 19, "Width": 16, "Height": 16 }, 
+                            "CanBeChosenAtStart": false,
+                            "CanBeAdoptedFromMarnie": true,
+                            "AdoptionPrice": 0
+                        }
+                    ],
+                    "Behaviors": [
+                        {
+                            "Id": "Idle", "Direction": "down", "RandomizeDirection": true, "Animation": [ { "Frame": 20, "Duration": 4000 } ], "Duration": 4000, "TimeoutBehaviorChanges": [ { "Behavior": "Walk", "Weight": 1 } ]
+                        },
+                        {
+                            "Id": "Walk", "WalkInDirection": true, "MoveSpeed": 2, "Animation": [ { "Frame": 0, "Duration": 200 }, { "Frame": 1, "Duration": 200 }, { "Frame": 2, "Duration": 200 }, { "Frame": 3, "Duration": 200 } ], "Duration": 2000, "TimeoutBehaviorChanges": [ { "Behavior": "Idle", "Weight": 1 }, { "Behavior": "Sleep", "Weight": 0.2 } ]
+                        },
+                        {
+                            "Id": "Sleep", "Animation": [ { "Frame": 28, "Duration": 10000 } ], "Duration": 20000, "TimeoutBehaviorChanges": [ { "Behavior": "Walk", "Weight": 1 } ]
+                        }
+                    ]
+                }
+            }
+        },
+
+        // ==========================================================================================
+        // UBICACIONES EN FESTIVALES
+        // ==========================================================================================
+        { "LogName": "Festival: Spring 13", "Action": "EditData", "Target": "Data/Festivals/spring13", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 19 63 2" } ] },
+        { "LogName": "Festival: Spring 24", "Action": "EditData", "Target": "Data/Festivals/spring24", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 4 36 1" } ] },
+        { "LogName": "Festival: Summer 11", "Action": "EditData", "Target": "Data/Festivals/summer11", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 27 14 1" } ] },
+        { "LogName": "Festival: Summer 28", "Action": "EditData", "Target": "Data/Festivals/summer28", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 25 36 2" } ] },
+        { "LogName": "Festival: Fall 16", "Action": "EditData", "Target": "Data/Festivals/fall16", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 38 89 2" } ] },
+        { "LogName": "Festival: Fall 27", "Action": "EditData", "Target": "Data/Festivals/fall27", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 26 68 0" } ] },
+        { "LogName": "Festival: Winter 8", "Action": "EditData", "Target": "Data/Festivals/winter8", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 74 27 1" } ] },
+        { "LogName": "Festival: Winter 25", "Action": "EditData", "Target": "Data/Festivals/winter25", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 13 63 1" } ] }
+    ]
+}

@@ -1,0 +1,28 @@
+{
+    "Changes": [
+        {
+            "LogName": "Registrar Musica Hedwyg",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Entries": {
+                "ProjectJerte.Hedwyg": {
+                    "ID": "ProjectJerte.Hedwyg",
+                    "FilePaths": [ "assets/Audio/hedwyg.ogg" ],
+                    "Category": "Music"
+                }
+            }
+        },
+        
+        {
+            "LogName": "Añadir Hedwyg a la Gramola",
+            "Action": "EditData",
+            "Target": "Data/JukeboxTracks",
+            "Entries": {
+                "ProjectJerte.Hedwyg": {
+                    "Name": "El Tema de Hedwyg", 
+                    "Available": null 
+                }
+            }
+        }
+    ]
+}

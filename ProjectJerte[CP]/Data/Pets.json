@@ -1,0 +1,25 @@
+{
+    "Changes": [
+        {
+            "LogName": "Textura de Alfie",
+            "Action": "Load",
+            "Target": "Animals/Alfie",
+            "FromFile": "assets/Animals/Alfie/alfie_1.png"
+        },
+        {
+            "LogName": "Registro Base de Datos Mascotas",
+            "Action": "EditData",
+            "Target": "Data/Pets",
+            "Entries": {
+                "ProjectJerte.Alfie": {
+                    "Breeds": [
+                        {
+                            "Id": "0",
+                            "Texture": "Animals/Alfie"
+                        }
+                    ]
+                }
+            }
+        }
+    ]
+}

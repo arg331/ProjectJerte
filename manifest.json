@@ -1,18 +1,8 @@
 {
-    "Name"          : "Project_Jerte - Expansion" , 
-    "Author"        : "Rogu" , 
-    "Version"       : "1.0.0" , 
-    "Description"   : "Un intento de mod para Stardew Valley, pensado para iterar sobre sí mismo constantemente",
-    "UniqueID"      : "arg331.ProjectJerte", 
-    "UpdateKeys"    : [],
-
-"ContentPackFor": {
-    "UniqueID": "Pathoschild.ContentPatcher"
-  },
-  "Dependencies": [
-    {
-       "UniqueID": "Pathoschild.ContentPatcher",
-       "IsRequired": true
-    }
-  ]
+    "Name": "Project Jerte - Core",
+    "Author": "Rogu",
+    "Version": "1.0.0",
+    "Description": "Lógica interna C# para eventos complejos.",
+    "UniqueID": "arg331.ProjectJerte.Core", 
+    "EntryDll": "ProjectJerte.dll" 
 }

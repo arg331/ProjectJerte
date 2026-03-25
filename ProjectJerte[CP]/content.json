@@ -5,6 +5,7 @@
         { "Action": "Include", "FromFile": "ProjectJerte[CP]/Data/Characters.json" },
         { "Action": "Include", "FromFile": "ProjectJerte[CP]/Data/Items.json" },
         { "Action": "Include", "FromFile": "ProjectJerte[CP]/Data/Events.json" },
-        { "Action": "Include", "FromFile": "ProjectJerte[CP]/Data/Mail.json" } 
+        { "Action": "Include", "FromFile": "ProjectJerte[CP]/Data/Mail.json" },
+        { "Action": "Include", "FromFile": "ProjectJerte[CP]/Data/Pets.json" }
     ]
 }

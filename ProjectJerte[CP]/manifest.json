@@ -1,0 +1,20 @@
+{
+    "Name": "Project_Jerte - Expansion",
+    "Author": "Rogu",
+    "Version": "1.0.0",
+    "Description": "Assets y datos inyectados por Content Patcher.",
+    "UniqueID": "arg331.ProjectJerte.CP",
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    },
+    "Dependencies": [
+        {
+            "UniqueID": "Pathoschild.ContentPatcher",
+            "IsRequired": true
+        },
+        {
+            "UniqueID": "arg331.ProjectJerte.Core", 
+            "IsRequired": true
+        }
+    ]
+}

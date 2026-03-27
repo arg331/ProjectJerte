@@ -7,7 +7,7 @@
             "FromFile": "assets/Animals/Alfie/alfie_1.png"
         },
         {
-            "LogName": "Registro Base de Datos Mascotas",
+            "LogName": "Inyección de Especie Alfie",
             "Action": "EditData",
             "Target": "Data/Pets",
             "Entries": {
@@ -15,7 +15,16 @@
                     "Breeds": [
                         {
                             "Id": "0",
-                            "Texture": "Animals/Alfie"
+                            "Texture": "Animals/Alfie",
+                            "IconTexture": "Animals/Alfie",
+                            "IconSourceRect": {
+                                "X": 0,
+                                "Y": 0,
+                                "Width": 32,
+                                "Height": 32
+                            },
+                            "BarkOverride": "squeak",
+                            "VoicePitch": 1.5
                         }
                     ]
                 }

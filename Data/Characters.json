@@ -70,47 +70,6 @@
         },
 
         // ==========================================================================================
-        // MASCOTA (ALFIE)
-        // ==========================================================================================
-        {
-            "LogName": "Add Pet: Alfie (Cobaya)",
-            "Action": "EditData",
-            "Target": "Data/Pets",
-            "Entries": {
-                "ProjectJerte.Cobaya": {
-                    "Id": "ProjectJerte.Cobaya",
-                    "DisplayName": "Cobaya",
-                    "DisplayType": "Cobaya",
-                    "BarkSound": "dwop", 
-                    "ContentSound": "dwop",
-                    "MoveSpeed": 2, 
-                    "Breeds": [
-                        {
-                            "Id": "Alfie",
-                            "Texture": "Mods/ProjectJerte/AlfiePetSprite", 
-                            "IconTexture": "Mods/ProjectJerte/AlfiePetSprite",
-                            "IconSourceRect": { "X": 8, "Y": 19, "Width": 16, "Height": 16 }, 
-                            "CanBeChosenAtStart": false,
-                            "CanBeAdoptedFromMarnie": true,
-                            "AdoptionPrice": 0
-                        }
-                    ],
-                    "Behaviors": [
-                        {
-                            "Id": "Idle", "Direction": "down", "RandomizeDirection": true, "Animation": [ { "Frame": 20, "Duration": 4000 } ], "Duration": 4000, "TimeoutBehaviorChanges": [ { "Behavior": "Walk", "Weight": 1 } ]
-                        },
-                        {
-                            "Id": "Walk", "WalkInDirection": true, "MoveSpeed": 2, "Animation": [ { "Frame": 0, "Duration": 200 }, { "Frame": 1, "Duration": 200 }, { "Frame": 2, "Duration": 200 }, { "Frame": 3, "Duration": 200 } ], "Duration": 2000, "TimeoutBehaviorChanges": [ { "Behavior": "Idle", "Weight": 1 }, { "Behavior": "Sleep", "Weight": 0.2 } ]
-                        },
-                        {
-                            "Id": "Sleep", "Animation": [ { "Frame": 28, "Duration": 10000 } ], "Duration": 20000, "TimeoutBehaviorChanges": [ { "Behavior": "Walk", "Weight": 1 } ]
-                        }
-                    ]
-                }
-            }
-        },
-
-        // ==========================================================================================
         // UBICACIONES EN FESTIVALES
         // ==========================================================================================
         { "LogName": "Festival: Spring 13", "Action": "EditData", "Target": "Data/Festivals/spring13", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 19 63 2" } ] },

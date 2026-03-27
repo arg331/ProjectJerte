@@ -1,0 +1,11 @@
+{
+    "Format": "2.0.0",
+    "Changes": [
+        { "Action": "Include", "FromFile": "Data/Maps.json" },
+        { "Action": "Include", "FromFile": "Data/Characters.json" },
+        { "Action": "Include", "FromFile": "Data/Items.json" },
+        { "Action": "Include", "FromFile": "Data/Events.json" },
+        { "Action": "Include", "FromFile": "Data/Mail.json" },
+        { "Action": "Include", "FromFile": "Data/Pets.json" }
+    ]
+}

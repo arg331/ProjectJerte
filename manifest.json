@@ -1,8 +1,10 @@
 {
-    "Name": "Project Jerte - Core",
+    "Name": "Project Jerte - Content",
     "Author": "Rogu",
     "Version": "1.0.0",
-    "Description": "Lógica interna C# para eventos complejos.",
-    "UniqueID": "arg331.ProjectJerte.Core", 
-    "EntryDll": "ProjectJerte.dll" 
+    "Description": "Datos y texturas.",
+    "UniqueID": "arg331.ProjectJerte.CP",
+    "ContentPackFor": {
+        "UniqueID": "Pathoschild.ContentPatcher"
+    }
 }

@@ -16,6 +16,18 @@
             "Target": "Maps/MiguelWoods",
             "FromFile": "assets/Maps/MiguelWoods.tmx"
         },
+        {
+            "LogName": "Schedules: Redirección de Claire (Override SVE)",
+            "Action": "EditData",
+            "Target": "Data/Schedules/Claire",
+            "Entries": {
+                "spring": "800 JojaMart 15 4 2/1700 Saloon 15 20 2/2300 Town 120 120 -1",
+                "summer": "800 JojaMart 15 4 2/1700 Saloon 15 20 2/2300 Town 120 120 -1",
+                "fall": "800 JojaMart 15 4 2/1700 Saloon 15 20 2/2300 Town 120 120 -1",
+                "winter": "800 JojaMart 15 4 2/1700 Saloon 15 20 2/2300 Town 120 120 -1",
+                "rain": "800 JojaMart 15 4 2/1700 Saloon 15 20 2/2300 Town 120 120 -1"
+            }
+        },
 
         // ==========================================================================================
         // DECLARACIÓN DE LOCALIZACIONES

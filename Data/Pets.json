@@ -1,16 +1,16 @@
 {
     "Changes": [
-        {
+       {
             "LogName": "Registro de Sonido Squeak",
             "Action": "EditData",
             "Target": "Data/AudioChanges",
             "Priority": "early",
             "Entries": {
-                "squakAlfie": {
-                    "ID": "squakAlfie",
-                    "FilePaths": [ "{{AbsoluteFilePath: assets/Audio/squakAlfie.wav}}" ],
-                    "Category": "Sound"
-                }
+               "squakAlfie": {
+                "Id": "squakAlfie",
+                "FilePaths": [ "{{AbsoluteFilePath: assets/Audio/squakAlfie.ogg}}" ],
+                "Category": "Sound"
+            }
             }
         },
         {
@@ -24,10 +24,11 @@
             "Action": "EditData",
             "Target": "Data/Pets",
             "Entries": {
-                "ProjectJerte.Alfie": {
-                    "Id": "ProjectJerte.Alfie",
+                "Alfie": {
+                    "Id": "Alfie",
                     "DisplayName": "Alfie",
                     "BarkSound": "squakAlfie",
+                    "ContentSound": "squakAlfie",
                     "MoveSpeed": 2,
                     "SleepOnBedChance": 0.05,
                     "SleepNearBedChance": 0.3,
@@ -64,6 +65,8 @@
                         {
                             "Id": "0",
                             "Texture": "Animals/Alfie",
+                            "BarkSound" : "squakAlfie",                    
+                            "ContentSound": "squakAlfie",
                             "IconTexture": "Animals/Alfie",
                             "IconSourceRect": { "X": 0, "Y": 0, "Width": 32, "Height": 32 },
                             "VoicePitch": 1.5,

@@ -1,6 +1,19 @@
 {
     "Changes": [
         {
+            "LogName": "Registro de Sonido Squeak",
+            "Action": "EditData",
+            "Target": "Data/AudioChanges",
+            "Priority": "early",
+            "Entries": {
+                "squakAlfie": {
+                    "ID": "squakAlfie",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Audio/squakAlfie.wav}}" ],
+                    "Category": "Sound"
+                }
+            }
+        },
+        {
             "LogName": "Textura de Alfie",
             "Action": "Load",
             "Target": "Animals/Alfie",
@@ -12,19 +25,50 @@
             "Target": "Data/Pets",
             "Entries": {
                 "ProjectJerte.Alfie": {
+                    "Id": "ProjectJerte.Alfie",
+                    "DisplayName": "Alfie",
+                    "BarkSound": "squakAlfie",
+                    "MoveSpeed": 2,
+                    "SleepOnBedChance": 0.05,
+                    "SleepNearBedChance": 0.3,
+                    "SleepOnRugChance": 0.5,
+                    "Behaviors": [
+                        {
+                            "Id": "Walk",
+                            "IsSideBehavior": false,
+                            "RandomizeDirection": true,
+                            "WalkInDirection": true,
+                            "RandomBehaviorChangeChance": 0.01,
+                            "RandomBehaviorChanges": [
+                                { "Weight": 3.0, "Behavior": "Walk" },
+                                { "Weight": 0.85, "Behavior": "SitDown" }
+                            ]
+                        },
+                        {
+                            "Id": "SitDown",
+                            "IsSideBehavior": false,
+                            "Direction": "down",
+                            "WalkInDirection": false,
+                            "Animation": [
+                                { "Frame": 16, "Duration": 100 },
+                                { "Frame": 17, "Duration": 100 }
+                            ],
+                            "LoopMode": "Hold",
+                            "RandomBehaviorChangeChance": 0.01,
+                            "RandomBehaviorChanges": [
+                                { "Weight": 2.0, "Behavior": "Walk" }
+                            ]
+                        }
+                    ],
                     "Breeds": [
                         {
                             "Id": "0",
                             "Texture": "Animals/Alfie",
                             "IconTexture": "Animals/Alfie",
-                            "IconSourceRect": {
-                                "X": 0,
-                                "Y": 0,
-                                "Width": 32,
-                                "Height": 32
-                            },
-                            "BarkOverride": "squeak",
-                            "VoicePitch": 1.5
+                            "IconSourceRect": { "X": 0, "Y": 0, "Width": 32, "Height": 32 },
+                            "VoicePitch": 1.5,
+                            "CanBeChosenAtStart": true,
+                            "CanBeAdoptedFromMarnie": true
                         }
                     ]
                 }

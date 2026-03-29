@@ -3,13 +3,13 @@
         {
             "LogName": "Registrar Musica Hedwyg",
             "Action": "EditData",
-            "Target": "Data/AudioChanges",
+            "Target": "Data/AudioCues",
             "Entries": {
                 "ProjectJerte.Hedwyg": {
-                    "ID": "ProjectJerte.Hedwyg",
-                    "FilePaths": [ "assets/Audio/hedwyg.ogg" ],
-                    "Category": "Music"
-                }
+                "ID": "ProjectJerte.Hedwyg",
+                "FilePaths": [ "{{AbsoluteFilePath: assets/Audio/Hedwyg.ogg}}" ],
+                "Category": "Music"
+            }
             }
         },
         
@@ -20,7 +20,7 @@
             "Entries": {
                 "ProjectJerte.Hedwyg": {
                     "Name": "El Tema de Hedwyg", 
-                    "Available": null 
+                    "Available": true 
                 }
             }
         }

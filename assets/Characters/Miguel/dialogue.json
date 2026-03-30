@@ -28,13 +28,12 @@
     "ItemDelivery_ProjectJerte.Quest.Superconductor": "¡Increíble! ¿De verdad es Iridio puro? Nunca había visto nada igual @, con esto podré hacer de todo, muchísimas gracias.$h",
 
 
-   // VERANO 20-21: DERBI DE LA TRUCHA (1.6)
     "summer_20": "¿Sabías que las truchas tienen una memoria olfativa brutal?#$b#Son capaces de oler la composición química de su río natal para volver a él nadando contracorriente. La naturaleza es cabezona como ella sola, eh? Me recuerda a un amigo de Indalia.",
     "spring_17": "El cielo aquí se ve distinto. Sin la humedad del valle, las estrellas parecen más afiladas, ¿verdad?",
    "winter_12": "Los calamares son increíbles. Sabías que tienen tres corazones y sangre azul porque usan cobre en vez de hierro para transportar oxígeno.#$b#Son prácticamente alienígenas!!#$b# Aunque a Gus solo le importa que queden bien fritos, claro.",
    "summer_28": "Las medusas lunares... He leído que no vienen al valle por casualidad, este evento está sincronizado matemáticamente con los ciclos lunares de final de verano.#$b#La naturaleza es impresionante. No tienen cerebro, ni calendario, y sin embargo, nunca llegan tarde... Llegan cuando tienen que llegar",
    "green_rain": "Esto es fascinante... Nunca había visto un musgo crecer a esta velocidad. Es como si la naturaleza tuviera prisa por recuperar lo que es suyo.",
-    // Festival del Huevo (Día 13 Primavera)
+    
     "spring_13": "¡El Festival del Huevo! Este año no voy a jugar, he visto varios huevos ya y sería trampa de cara a los pequeñajos.#$b#Pero Abigail se lo toma muy en serio, da miedo.",
     
     // Danza Floral (Día 24 Primavera) - El momento incómodo
@@ -59,11 +58,9 @@
     "give_gift_Miguel_Like": "¡Anda! Muchas gracias. Tiene muy buena pinta.",
     "give_gift_Miguel_Hate": "¿Eh? ¿Esto no es...?#$b# Gracias @",
     "give_gift_Miguel_Birthday_Love": "¡Anda! ¿Te has acordado de mi cumple?#$b#Normalmente se me olvida hasta a mí. Eres increíble, me alegro de tenerte a mi lado @."  , 
-
-//PROTOTIPOS
     "server_minecraft" : "Hoy me voy a pasar el día jugando a Minecraft con mis amigos, no los veo desde que me fui de Indalia... #Los echo mucho de menos... Al final la vida nos manda a todos a sitios distintos, y eso está bien, cada uno tiene que seguir su propio camino, es nuestro deber disfrutarlo lo máximo posible",
     "rain_variation" : "Qué alegría verte @!! #He salido a sentir un poquito la lluvia, en mi tierra no suele llover, es tan raro que en todas las casas se celebra haciendo migas, aunque no sé por qué lo hacen... #Tengo que llamar a mi madre para que me lo cuente, seguro que se alegra de ver que sigo vivo, la echo de menos." ,
     "emotional_crysis" : "Ey @, ¿Cómo estás? Me alegro de verte. ¿Cómo va la granja? Intenta cuidarte, la tierra a veces puede ser muy sacrificada, lo sé por experiencia.",
     "HarryPotterEvent" : "Hola @!! Qué alegría que te pases por aquí! Has llegado justo a tiempo #Estaba organizando mis cosas y he encontrado unas películas que le gustan mucho a una amiga, van de un aprendiz de mago que vive con sus tíos#Es mejor que lo veas tú misma, ¿te apetece? ¡He hecho palomitas!",
-    "HarryPotterPostEvent" : ""
+    
 }

@@ -1,11 +1,25 @@
 {
     "Format": "2.0.0",
     "Changes": [
+        { "Action": "Include", "FromFile": "Data/Audio.json" },
         { "Action": "Include", "FromFile": "Data/Maps.json" },
         { "Action": "Include", "FromFile": "Data/Characters.json" },
         { "Action": "Include", "FromFile": "Data/Items.json" },
         { "Action": "Include", "FromFile": "Data/Events.json" },
         { "Action": "Include", "FromFile": "Data/Mail.json" },
-        { "Action": "Include", "FromFile": "Data/Pets.json" }
+        { "Action": "Include", "FromFile": "Data/Pets.json" },
+                {
+            "LogName": "Test Estático Julia Edition",
+            "Action": "EditImage",
+            "Target": "Minigames/TitleButtons",
+            "FromFile": "assets/fondoJulia.png",
+               "ToArea": { 
+        "X": 130, 
+        "Y": 135, 
+        "Width": 250, 
+        "Height": 100 
+    },
+            "PatchMode": "Overlay"
+        }
     ]
 }

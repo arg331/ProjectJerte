@@ -1,18 +1,18 @@
 {
     "Changes": [
-        {
+            {
             "LogName": "Registrar Musica Hedwyg",
             "Action": "EditData",
-            "Target": "Data/AudioCues",
+            "Target": "Data/AudioChanges",
+            "Priority": "early",
             "Entries": {
-                "ProjectJerte.Hedwyg": {
-                "ID": "ProjectJerte.Hedwyg",
-                "FilePaths": [ "{{AbsoluteFilePath: assets/Audio/Hedwyg.ogg}}" ],
-                "Category": "Music"
-            }
+                "HedwygTheme": {
+                    "Id": "HedwygTheme",
+                    "FilePaths": [ "{{AbsoluteFilePath: assets/Audio/Hedwyg.ogg}}" ],
+                    "Category": "Sound"
+                }
             }
         },
-        
         {
             "LogName": "Añadir Hedwyg a la Gramola",
             "Action": "EditData",

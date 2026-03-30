@@ -27,20 +27,47 @@
                     "Action": "AddMail Current Miguel_Quest_Tech_Mail"
                 }
             }
-        },
-        {
-            "LogName": "Trigger para enviar la Bufanda",
-            "Action": "EditData",
-            "Target": "Data/TriggerActions",
-            "Entries": {
-                "Miguel_Send_Bufanda_Mail": {
-                    "Id": "Miguel_Send_Bufanda_Mail",
-                    "Trigger": "DayStarted",
-                    "Condition": "PLAYER_HAS_SEEN_EVENT Current 99112266, PLAYER_HEARTS Current Miguel 7, !PLAYER_HAS_MAIL Current Miguel_BufandaMail",
-                    "Action": "AddMail Current Miguel_BufandaMail"
-                }
-            }
-        },
+        },{
+    "LogName": "Events: Town (La Bufanda de Miguel)",
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+   "Entries": {
+        "99112267/f Miguel 1000/e 99112266/t 800 1800": "HedwygTheme/7 6/farmer 11 6 3 Miguel 6 6 0 Emily 5 6 1/skippable/pause 500/speak Emily \"Oye, está bastante bien Miguel.\"/speak Miguel \"¿Seguro? Es mi primera vez haciendo estas cosas... ¿Has visto si tiene alguna mancha de sangre? Me he pinchado como... ¿7 veces?\"/speak Emily \"A ver, tiene algún despunte tonto, pero yo lo veo bien.\"/speak Miguel \"Espero que le guste...\"/move farmer -4 0 3/pause 500/faceDirection Miguel 1/speak Miguel \"¡Anda, @!\"/pause 500/speak Miguel \"Perdona si estoy un poco despistado, anoche no dormí nada, estaba haciendo... Bueno...\"/speak Miguel \"¿Qué te pareció la película? Se te veía muy feliz viéndola, casi parece que te recordara a algo.\"/speak Miguel \"El tema es que bueno... Sabes que estoy intentando obligarme a hacer cosas nuevas, ¿no? Pues ahora te ha tocado a ti, le he pedido a Emily que me enseñe a tejer.\"/speak Miguel \"No soy especialmente bueno, pero te he hecho esto, espero que te guste. Es como la del prota, pensé que te gustaría tenerla.\"/speak Miguel \"Dicen que las cosas hechas a mano guardan un poco de la intención de quien las crea... espero que te abrigue cuando el frío apriete en el Valle.\"/addItem ProjectJerte.BufandaHarry 1/message \"Miguel te entrega una bufanda de lana roja y dorada. Al ponértela, notas una calidez inusual y una extraña sensación de confianza.\"/pause 1000/end"
+    }
+},
+{
+    "LogName": "Events: Town (Las Migas de Indalia)",
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+   "Entries": {
+        "99112269/f Miguel 1000/w rainy/t 1200 2200": "continue/44 73/farmer 38 73 1 Miguel 45 71 2/skippable/pause 500/move farmer 6 0 1/move Miguel 0 1 3/pause 500/speak Miguel \"¡@! Pasa rápido al portal de Gus, que te vas a calar entera.\"/pause 500/speak Miguel \"Vaya día se ha quedado, ¿eh? En Indalia, cuando caían cuatro gotas así, no había discusión posible sobre qué comer.\"/speak Miguel \"Cuando volvía del instituto hacia mi casa y llovía (que eran pocas veces), todas las chimeneas de mi pueblo olían a lo mismo, en todas las casas se hacían migas.\"/speak Miguel \"No sé de dónde vendrá la tradición, pero está muy metido dentro de la idea colectiva. Es una de esas cosillas que te recuerdan a casa.\"/speak Miguel \"Como aquí no paraba de llover, le he pedido la cocina a Gus un rato. Toma, te he guardado un plato caliente, mi abuela me enseñó a hacerlas, aunque no me quedan exactamente como a ella.\"/addItem Migas 1/speak Miguel \"Cómetelas antes de que se enfríen. Verás cómo te quitan la humedad de los huesos en un segundo, o eso decía ella.\"/message \"Miguel te entrega un plato humeante de Migas. Huelen a ajo y a nostalgia por un tubo.\"/pause 1000/end"
+    }
+},
+{
+    "LogName": "Events: Town (Las Perrunillas)",
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "Entries": {
+        "99112271/f Miguel 500/t 1400 1700/w sunny": "continue/25 67/farmer 25 75 0 Miguel 25 67 2/skippable/pause 500/move farmer 0 -5 0/pause 500/speak Miguel \"¡@! Justo te iba a buscar. Me han mandado un paquete con dulces de Indalia y me van a salir las almendras por las orejas.\"/speak Miguel \"Son Perrunillas. En mi tierra se toman mucho con el café o a media tarde. Tienen una textura que se deshace, ya verás.\"/speak Miguel \"Ten, llévate unas pocas, son un dulce muy de viejo, pero están buenísimas.\"/addItem ProjectJerte.Perrunilla 5/speak Miguel \"Cuidado, que enganchan. Siempre acabo con el teclado lleno de pedazos de almendra tostada, lo limpio cada dos por tres.\"/message \"Miguel te entrega unas perrunillas. Tienen una pinta increíble y huelen a almendra tostada.\"/pause 1000/end"
+    }
+},
+{
+    "LogName": "Events: Saloon (La Torta del Casar)",
+    "Action": "EditData",
+    "Target": "Data/Events/Saloon", 
+    "Entries": {
+        "99112270/f Miguel 1500/t 900 2000": "continue/5 5/farmer 5 10 0 Miguel 5 5 2/skippable/pause 500/move farmer 0 -3 0/pause 500/speak Miguel \"Hombre, @. Qué oportuno. Estaba a punto de cometer un atentado, no sé cómo se abre esto.\"/speak Miguel \"Me acaba de llegar un paquete de un colega que vive en Extrema y Dura, una provincia que pilla relativamente cerca de Indalia.\"/speak Miguel \"Me ha mandado esto. Una Torta del Casar auténtica. Una amiga me la recomendó hace eones, pero nunca había tenido la oportunidad de probarla.\"/speak Miguel \"A ella la volvería loca esto. Se lo comería a cucharadas si la dejaran.\"/speak Miguel \"Venga, pon las manos y coge una o dos cajas, que este hombre me ha mandado como para alimentar a todo el valle y yo solo voy a reventar. Además, Alvin seguro que revienta si le pone las patitas a esto.\"/addItem TortaDelCasar 5/speak Miguel \"Hay una nota que nos ha dejado: 'Úntala en pan tostado, hazme caso.'\"/message \"Miguel te da una caja con Tortas del Casar. Su aroma es... Bueno, lo conoces perfectamente. Un abrazo Julia :D\"/pause 1000/end"
+    }
+},
+       
+{
+    "LogName": "Events: La Espada del Sombrero",
+    "Action": "EditData",
+    "Target": "Data/Events/Town",
+    "Entries": {
+        "99112268/f Miguel 1500/e 99112266/t 900 1700": "continue/44 56/farmer 44 65 0 Miguel 44 56 2/skippable/pause 500/move farmer 0 -7 0/pause 500/speak Miguel \"¡Eh, @! Menos mal que te encuentro. Tienes que venir conmigo ahora mismo.\"/speak Miguel \"Rasmodius me ha mandado una paloma con una carta rarísima. Dice que ha recibido una caja extraña que tiene mi dirección y que uno de los trastos está... ¿vibrando?\"/speak Miguel \"Yo solo no subo ahí ni loco. Venga, acompáñame porfa.\"/pause 500/message \"Un rato después, en la torre del Mago...\"/fade/warp farmer 3 17/warp Miguel 4 17/warp Wizard 8 17/changeLocation WizardHouse/viewport 6 17 true/faceDirection farmer 1/faceDirection Miguel 1/faceDirection Wizard 3/pause 1000/speak Wizard \"Ah, por fin. Pasad. Llevo días catalogando artefactos de un viejo colega británico.\"/speak Wizard \"Ese sombrero puntiagudo sobre la mesa es... fascinante... los textos dicen que posee una voluntad antigua.\"/move Miguel 2 0 1/pause 500/speak Miguel \"Espera, ese sombrero no es...? Déjame cogerlo.\"/speak Miguel \"Espera un momento... ¿Por qué pesa tanto la base de esto?\"/pause 500/playSound clank/jump Miguel/pause 500/speak Miguel \"¡Ostras! ¡Hay una espada entera aquí metida!\"/speak Wizard \"Espera, eso es... Sí.\"/pause 400/speak Wizard \"Las crónicas dictan que ese acero solo se presenta ante alguien que demuestra verdadero valor en un momento de necesidad.\"/move Miguel -1 0 3/faceDirection Miguel 3/speak Miguel \"Pues yo el otro día salí corriendo de un slime verde, así que dudo que el sombrero me considere un héroe.\"/speak Miguel \"Toma, @. Creo que la hoja tiene tu nombre escrito.\"/addItem ProjectJerte.EspadaMiguel 1/message \"Has recibido una espada de plata con rubíes incrustados. Su hoja parece repeler la suciedad. Tiene una nota que dice: 'De un pesado de Indalia'.\"/pause 1000/end"
+    }
+},
         {
             "LogName": "Events: BusStop (Shortcut Intro)",
             "Action": "EditData",
@@ -71,7 +98,7 @@
     "Action": "EditData",
     "Target": "Data/Events/Saloon",
     "Entries": {
-        "99112266/f Miguel 1500/t 1800 2350": "HedwygTheme/14 21/farmer 14 24 0 Gus 14 18 2 Harvey 5 20 1 Pam 7 18 1 Shane 19 23 3 Clint 18 22 2 Emily 12 21 1 Maru 10 21 2 Leah 9 22 1 Sebastian 3 23 3 Miguel 35 20 3/skippable/pause 1000/speak Gus \"¡Buenas noches, @! Pasa, ponte cómoda.\"/speak Gus \"A Miguel se le ha ocurrido hacer una 'noche de películas'. No debería tardar en llegar con el material.\"/move farmer 0 -3 0/faceDirection farmer 1/speak Shane \"Espero que no sea un documental de 'culturas mesoamericanas' o algo así, no sé si voy a aguantar una hora o dos secuestrado.\"/pause 500/move Miguel -14 0 3/faceDirection Miguel 3/speak Miguel \"¡Ya estoy aquí! Perdonad el retraso, estas cajas pesan un quintal.\"/speak Miguel \"Revisando trastos de Indalia he encontrado estas viejas cintas... van de un aprendiz de mago con gafas.\"/faceDirection farmer 1/faceDirection Sebastian 1/speak Sebastian \"¿Un mago? Espero que al menos tenga una escoba voladora...\"/faceDirection Emily 1/speak Emily \"¡Oh, me encantan esas pelis! Tienen una energía mística preciosa, Miguel.\"/faceDirection Miguel 3/speak Miguel \"¿Pero cómo es que aún no habéis puesto los taburetes?\"/faceDirection Maru 1/speak Maru \"Tranquilo, Miguel. Ya tengo el viejo reproductor listo; después de lo que le hicimos el otro día, lee hasta posos de café.\"/faceDirection Gus 2/speak Gus \"¡Menos cháchara, que se enfrían las palomitas! Venga, apagad las luces y coged un cuenco.\"/pause 500/message \"Pasáis la noche viendo películas de magos. Miguel parece feliz de compartir cosas con el Valle. Cada vez se le ve más dentro del grupo.\"/pause 1000/end"
+        "99112266/f Miguel 1500/t 1800 2350": "HedwygTheme/14 21/farmer 14 24 0 Gus 14 18 2 Harvey 5 20 1 Pam 7 18 1 Shane 19 23 3 Clint 18 22 2 Emily 12 21 1 Maru 10 21 2 Leah 9 22 1 Sebastian 3 23 3 Miguel 35 20 3/skippable/pause 1000/speak Gus \"¡Buenas noches, @! Pasa pasa, ponte cómoda.\"/speak Gus \"Miguel me ha llamado esta mañana, se le ha ocurrido hacer una noche de películas. No debería tardar en llegar con el material.\"/move farmer 0 -3 0/faceDirection farmer 1/speak Shane \"Espero que no sea un documental de culturas mesoamericanas o algo así, no sé si voy a aguantar una hora o dos secuestrado.\"/pause 500/move Miguel -14 0 3/faceDirection Miguel 3/speak Miguel \"¡Ya estoy aquí! Perdonad el retraso, estas cajas pesan un quintal.\"/speak Miguel \"Revisando trastos de Indalia he encontrado estas viejas cintas... van de un aprendiz de mago que pierde a sus padres, lleva gafas.\"/faceDirection farmer 1/faceDirection Sebastian 1/speak Sebastian \"¿Un mago? Espero que al menos tenga una escoba voladora...\"/faceDirection Emily 1/speak Emily \"¡Oh, me encantan esas pelis! Tienen una energía mística preciosa, Miguel.\"/faceDirection Miguel 3/speak Miguel \"¿Pero cómo es que aún no habéis puesto los taburetes?\"/faceDirection Maru 1/speak Maru \"Tranquilo, Miguel. Ya tengo el viejo proyector de George listo. Después de lo que le hicimos el otro día, lee hasta posos de café.\"/faceDirection Gus 2/speak Gus \"¡Menos cháchara, que se enfrían las palomitas! Venga, apagad las luces y coged un cuenco.\"/pause 500/message \"Pasáis la noche viendo películas de magos. Miguel parece feliz de compartir cosas con el Valle. Cada vez se le ve más dentro del grupo.\"/pause 1000/end"
     }
 },
 {
@@ -79,7 +106,7 @@
     "Action": "EditData",
     "Target": "Data/Events/Beach",
   "Entries": {
-        "99112265/f Miguel 250/s summer": "none/35 35/farmer -10 -10 1 Miguel 35 35 3 Willy 34 35 1/skippable/pause 1000/speak Miguel \"Muchas gracias por dejarme acompañarte, Willy. Necesitaba ver la mar un rato.\"/speak Willy \"No hay de qué, muchacho. El mar limpia la cabeza de tanta pantallita. ¿Y esas cajas que traes ahí con tanto celo?\"/speak Miguel \"Son semillas de Lúpulo. Un buen amigo que trabaja en los campos cerca de Indalia me las consiguió. Mis padres eran agricultores, ¿sabes?\"/speak Miguel \"Crecí en el campo ayudando en la tierra pero... bueno, yo acabé entre pantallitas.\"/fade/viewport 25 22 true/warp Miguel 26 26/warp Willy 25 26/warp farmer 25 19/faceDirection farmer 2/pause 500/move Miguel 0 -4 0/move Willy 0 -4 0/pause 500/emote Miguel 16/speak Miguel \"¡@! Justo a tiempo. Estábamos volviendo de dar una vuelta con el bote.\"/speak Miguel \"Mira, me he traído estas cajas de Indalia, pero creo que la persona más indicada para tenerlas eres tú.\"/speak Miguel \"Me da pena verlas morir en un estante y sé que tú les darás la vida que merecen.\"/pause 400/speak Miguel \"Tómalas. Si las cuidas bien, verás por qué son tan especiales.\"/addItem ProjectJerte.SemillaIndalo 20/speak Willy \"Haces bien, Miguel. @ tiene buena mano para todo lo que brota de la tierra, aunque eso ya lo sabes.\"/end"
+        "99112265/f Miguel 250/s summer": "none/35 35/farmer -10 -10 1 Miguel 35 35 3 Willy 34 35 1/skippable/pause 1000/speak Miguel \"Muchas gracias por dejarme acompañarte, Willy. Necesitaba ver la mar un rato.\"/speak Willy \"No hay de qué, muchacho. El mar limpia la cabeza de tanta pantallita. ¿Y esas cajas que traes ahí con tanto celo?\"/speak Miguel \"Son semillas de Lúpulo. Un buen amigo que trabaja en los campos cerca de Indalia me las consiguió. Mis padres eran agricultores, ¿sabes?\"/speak Miguel \"Crecí en el campo ayudando en la tierra pero... bueno, yo acabé entre pantallitas.\"/fade/viewport 25 22 true/warp Miguel 26 26/warp Willy 25 26/warp farmer 25 19/faceDirection farmer 2/pause 500/move Miguel 0 -4 0/move Willy 0 -4 0/pause 500/emote Miguel 16/speak Miguel \"¡@! Justo a tiempo. Estábamos volviendo de dar una vuelta con el bote.\"/speak Miguel \"Mira, me he traído estas cajas de Indalia, pero creo que la persona más indicada para tenerlas eres tú.\"/speak Miguel \"Me da pena verlas morir en un estante y sé que tú les darás la vida que merecen.\"/pause 400/speak Miguel \"Tómalas. Si las cuidas bien, verás por qué son tan especiales.\"/addItem ProjectJerte.SemillaIndalo 20/addItem ProjectJerte.CervezaAlhambra 1/speak Miguel \"Y toma esto también. Es el resultado final para que veas a qué me refiero. Para que te motives con el huerto.\"/speak Willy \"Haces bien, Miguel. @ tiene buena mano para todo lo que brota de la tierra, aunque eso ya lo sabes.\"/end"
     }
 },
 {

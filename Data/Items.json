@@ -129,7 +129,7 @@
             "Entries": {
                 "ProjectJerte.EspadaMiguel": {
                     "Name": "Espada de Gryffindor",
-                    "DisplayName": "Espada de Gryffindor",
+                    "DisplayName": "EspadaGryffindor",
                     "Description": "Una reliquia legendaria que te regaló Miguel. Es de plata impregnada en veneno de... ¿Basilisco?. Dícese que solo aparece ante un verdadero valiente.",
                     "MinDamage": 100,
                     "MaxDamage": 200,

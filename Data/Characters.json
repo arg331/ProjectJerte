@@ -63,7 +63,8 @@
               "Miguel_SitEast" : "16"
             }
         },
- {
+        // eventos de festivales
+        {
             "LogName": "Festival: Spring 13 (Festival del Huevo)",
             "Action": "EditData",
             "Target": "Data/Festivals/spring13",
@@ -73,8 +74,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 22 62/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 22 62 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -88,8 +90,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 10 42/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 10 42 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -103,8 +106,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 25 36/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 25 36 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -118,8 +122,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 25 36/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 25 36 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -133,8 +138,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 38 89/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 38 89 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -148,8 +154,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 26 68/faceDirection Miguel 0"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 26 68 up",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -163,8 +170,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 74 27/faceDirection Miguel 1"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 74 27 right",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -178,19 +186,11 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 13 63/faceDirection Miguel 1"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 13 63 right",
+                    "Delimiter": "/"
                 }
             ]
-        },
-
-        { "LogName": "Festival: Spring 13", "Action": "EditData", "Target": "Data/Festivals/spring13", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 19 63 2" } ] },
-        { "LogName": "Festival: Spring 24", "Action": "EditData", "Target": "Data/Festivals/spring24", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 4 36 1" } ] },
-        { "LogName": "Festival: Summer 11", "Action": "EditData", "Target": "Data/Festivals/summer11", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 27 14 1" } ] },
-        { "LogName": "Festival: Summer 28", "Action": "EditData", "Target": "Data/Festivals/summer28", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 25 36 2" } ] },
-        { "LogName": "Festival: Fall 16", "Action": "EditData", "Target": "Data/Festivals/fall16", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 38 89 2" } ] },
-        { "LogName": "Festival: Fall 27", "Action": "EditData", "Target": "Data/Festivals/fall27", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 26 68 0" } ] },
-        { "LogName": "Festival: Winter 8", "Action": "EditData", "Target": "Data/Festivals/winter8", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 74 27 1" } ] },
-        { "LogName": "Festival: Winter 25", "Action": "EditData", "Target": "Data/Festivals/winter25", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 13 63 1" } ] }
+        }
     ]
 }

@@ -43,7 +43,7 @@
             "Action": "EditData",
             "Target": "Data/NPCGiftTastes",
             "Entries": {
-                "Miguel": "¡Buah! ¿En serio? ¡Justo lo que necesitaba!$h#$b#Me conoces muy bien, @. Muchísimas gracias.$h/ProjectJerte.CervezaAlhambra ProjectJerte.LupuloIndalo TortaDelCasar Migas 395 253 787/¡Anda! Muchas gracias. Tiene muy buena pinta.$h/-2 -7 -26 -75 -79 -80 -81/¿Esto? Bueno... gracias por la intención./-4 -28/¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Qué asco... Gracias por la intención, supongo./167 168 169 170 171 172/Gracias./ "
+                "Miguel": "¡Buah! ¿En serio? ¡Justo lo que necesitaba!$h#$b#Me conoces muy bien, @. Muchísimas gracias.$h/ProjectJerte.CervezaAlhambra ProjectJerte.LupuloIndalo TortaDelCasar Migas 395 253 787/¡Anda, muchas gracias @, significa mucho para mí!$h/-2 -7 -26 -75 -79 -80 -81/¿Esto? Bueno... gracias por la intención./-4 -28/¿Eh? ¿Esto...?#$b#Perdona, pero no sé muy bien qué hacer con esto. Gracias por la intención, supongo./167 168 169 170 171 172/Gracias @./ "
             }
         },
         {
@@ -63,10 +63,128 @@
             "Action": "EditData",
             "Target": "Data/animationDescriptions",
             "Entries": {
-              // He eliminado "Miguel_Typing" para que no crashee. (03/03/26)
-              // Dejo "Miguel_SitEast" por si acaso el sprite sí tiene el frame 16.
               "Miguel_SitEast" : "16"
             }
+        },
+ {
+            "LogName": "Festival: Spring 13 (Festival del Huevo)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring13",
+            "Entries": {
+                "Miguel": "¡El Festival del Huevo! Este año no voy a jugar, he visto varios huevos ya y sería trampa de cara a los pequeñajos.#$b#Pero Abigail se lo toma muy en serio, me da miedo. ¿Sabes que lleva una daga bajo la falda? Que no la moleste ningún niño..."
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 22 62/faceDirection Miguel 2"
+                }
+            ]
+        },
+        {
+            "LogName": "Festival: Spring 24 (Danza Floral)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/spring24",
+            "Entries": {
+                "Miguel": "Uf... bailar en público no es lo mío. Me pongo muy nervioso, tengo que ir mejorándolo poco a poco...#$b#Pero lo estoy trabajando, te lo prometo. Quizás el año que viene"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 10 42/faceDirection Miguel 2"
+                }
+            ]
+        },
+        {
+            "LogName": "Festival: Summer 11 (Luau)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer11",
+            "Entries": {
+                "Miguel": "Gus está nervioso por la sopa. Le he dicho que si falla, leakeo las fotos del Gobernador con su amante, pero creo que no le ha hecho gracia, lleva sin hablarme dos horas... ¿Puedes hablar con él?"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 25 36/faceDirection Miguel 2"
+                }
+            ]
+        },
+        {
+            "LogName": "Festival: Summer 28 (Medusas Lunares)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/summer28",
+            "Entries": {
+                "Miguel": "Las medusas lunares... He leído que no vienen al valle por casualidad, este evento está sincronizado con los ciclos lunares de final de verano.#$b#La naturaleza es impresionante. No tienen cerebro, ni calendario, y sin embargo, nunca llegan tarde... Llegan cuando tienen que llegar, como un reloj suizo."
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 25 36/faceDirection Miguel 2"
+                }
+            ]
+        },
+        {
+            "LogName": "Festival: Fall 16 (Feria de Stardew Valley)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall16",
+            "Entries": {
+                "Miguel": "He estado calculando la física del juego de la ruleta... Creo que tiene un mecanismo de resistencia variable detrás, favorece a la casa. Ya he visto a dos palmar el sueldo de un mes... Ahora voy yo#$b#Pero no le digas a Lewis que sabemos que está trucado, que me echa del pueblo... Espera, será de esa manera como ha pagado su estatua de oro?"
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 38 89/faceDirection Miguel 2"
+                }
+            ]
+        },
+        {
+            "LogName": "Festival: Fall 27 (Víspera de los Espíritus)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/fall27",
+            "Entries": {
+                "Miguel": "¿Has visto el laberinto? Los niños se lo están pasando super guay.#$b#Ojalá volver a tener su edad, aún me acuerdo de los vídeos de Planeta Vegetta."
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 26 68/faceDirection Miguel 0"
+                }
+            ]
+        },
+        {
+            "LogName": "Festival: Winter 8 (Festival del Hielo)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter8",
+            "Entries": {
+                "Miguel": "No entiendo cómo Willy puede aguantar tanto tiempo pescando en el hielo. Yo llevo tres capas térmicas y sigo sin sentir los dedos de los pies."
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 74 27/faceDirection Miguel 1"
+                }
+            ]
+        },
+        {
+            "LogName": "Festival: Winter 25 (Estrella de Invierno)",
+            "Action": "EditData",
+            "Target": "Data/Festivals/winter25",
+            "Entries": {
+                "Miguel": "La Fiesta de la Estrella de Invierno... Es la única época del año en la que mi primo Gus descansa un poco.#$b#Le he comprado un juego de cuchillos nuevos de acero de Toletum, pero no digas nada."
+            },
+            "TextOperations": [
+                {
+                    "Operation": "Append",
+                    "Target": ["Entries", "set-up"],
+                    "Value": "/warp Miguel 13 63/faceDirection Miguel 1"
+                }
+            ]
         },
 
         // ==========================================================================================

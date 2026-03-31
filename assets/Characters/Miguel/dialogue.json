@@ -30,26 +30,20 @@
     "summer_20": "¿Sabías que las truchas tienen una memoria olfativa brutal?#$b#Son capaces de oler la composición química de su río natal para volver a él nadando contracorriente. La naturaleza es cabezona como ella sola, eh? Me recuerda a un amigo de Indalia.",
     "spring_17": "El cielo aquí se ve distinto. Sin la humedad del valle, las estrellas parecen más afiladas, ¿verdad?",
    "winter_12": "Los calamares son increíbles. Sabías que tienen tres corazones y sangre azul porque usan cobre en vez de hierro para transportar oxígeno.#$b#Son prácticamente alienígenas!!#$b# Aunque a Gus solo le importa que queden bien fritos, claro.",
-   "summer_28": "Las medusas lunares... He leído que no vienen al valle por casualidad, este evento está sincronizado matemáticamente con los ciclos lunares de final de verano.#$b#La naturaleza es impresionante. No tienen cerebro, ni calendario, y sin embargo, nunca llegan tarde... Llegan cuando tienen que llegar",
+   "summer_28": "Las medusas lunares... He leído que no vienen al valle por casualidad, este evento está sincronizado matemáticamente con los ciclos lunares de final de verano.#$b#La naturaleza es impresionante. No tienen cerebro, ni calendario, y sin embargo, nunca llegan tarde... Llegan cuando tienen que llegar, como un reloj suizo",
    "green_rain": "Esto es fascinante... Nunca había visto un musgo crecer a esta velocidad. Es como si la naturaleza tuviera prisa por recuperar lo que es suyo.",
     
-    "spring_13": "¡El Festival del Huevo! Este año no voy a jugar, he visto varios huevos ya y sería trampa de cara a los pequeñajos.#$b#Pero Abigail se lo toma muy en serio, da miedo.",
+    "spring_13": "¡El Festival del Huevo! Este año no voy a jugar, he visto varios huevos ya y sería trampa de cara a los pequeñajos.#$b# ¿Sabes que Abigail lleva una daga atada a la pierna? Yo no te he dicho nada...",
     
-    // Danza Floral (Día 24 Primavera) - El momento incómodo
-    "spring_24": "Uf... bailar en público no es lo mío. Me pongo muy nervioso, tengo que ir mejorándolo poco a poco...#Pero lo estoy trabajando, te lo prometo",
+    "spring_24": "Uf... bailar en público no es lo mío. Me pongo muy nervioso, tengo que ir mejorándolo poco a poco...#Pero lo estoy trabajando, te lo prometo, quizá el año que viene.",
     
-    // Luau (Día 11 Verano)
-    "summer_11": "Gus está nervioso por la sopa. Le he dicho que si falla, leakeo las fotos del Gobernador con su amante, pero creo que no le ha hecho gracia, lleva sin hablarme dos horas...",
+  
+    "summer_11": "Gus está nervioso por la sopa. Le he dicho que si falla, leakeo las fotos del Gobernador con su amante, pero creo que no le ha hecho gracia, lleva sin hablarme dos horas...¿Podrías hablar con él?",
     
-    // Halloween / Spirit's Eve (Día 27 Otoño)
-    "fall_27": "¿Has visto el laberinto? Los niños se lo están pasando super guay, #Ojalá volver a tener su edad, aún me acuerdo de Planeta Vegetta",
+    "fall_27": "¿Has visto el laberinto? Los niños se lo están pasando super guay, #Ojalá volver a tener su edad, aún me acuerdo de Planeta Vegetta, es curioso que Samuel de Luque se haya hecho más famoso que el propio personaje del anime",
     
-    // Estrella de Invierno (Día 25 Invierno)
-    "winter_25": "La Fiesta de la Estrella de Invierno... Me encanta. Es la única época del año en la que mi primo Gus descansa un poco.#$b#Le he comprado un juego de cuchillos nuevos de acero de Toletum, pero no digas nada.",
-   // =============================================================
-    // REGALOS
-    // =============================================================
-    "give_gift_Miguel_395": "¡Café! Dios, gracias.#$b#",
+   "winter_25": "La Fiesta de la Estrella de Invierno... Me encanta. Es la única época del año en la que mi primo Gus descansa un poco.#$b#Le he comprado un juego de cuchillos nuevos de acero de Toletum, pero no digas nada.",
+  "give_gift_Miguel_395": "¡Café! Dios, gracias.#$b#",
     "give_gift_Miguel_253": "¡¿Un Triple?! ¡Ostras! #$b#¡Me encanta! Gracias @, últimamente estoy muy dormido, no puedo seguir así.",
     "give_gift_Miguel_167": "¿Joja Cola? Emm... Gracias!",
     

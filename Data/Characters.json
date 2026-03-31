@@ -1,8 +1,5 @@
 {
     "Changes": [
-        // ==========================================================================================
-        // DATOS BÁSICOS DEL NPC (MIGUEL)
-        // ==========================================================================================
         {
             "LogName": "Miguel Character Base Data",
             "Action": "EditData",
@@ -26,18 +23,10 @@
                 }
             }
         },
-
-        // ==========================================================================================
-        // CARGA DE SPRITES, RETRATOS, DIÁLOGOS Y HORARIOS
-        // ==========================================================================================
         { "LogName": "Load Miguel Portraits", "Action": "Load", "Target": "Portraits/Miguel", "FromFile": "assets/Characters/Miguel/miguel_portrait_neutro.png" },
         { "LogName": "Load Miguel Sprites", "Action": "Load", "Target": "Characters/Miguel", "FromFile": "assets/Characters/Miguel/miguel_sprite.png" },
         { "LogName": "Load Miguel Dialogue", "Action": "Load", "Target": "Characters/Dialogue/Miguel", "FromFile": "assets/Characters/Miguel/dialogue.json" },
         { "LogName": "Load Miguel Schedule", "Action": "Load", "Target": "Characters/Schedules/Miguel", "FromFile": "assets/Characters/Miguel/schedule.json" },
-
-        // ==========================================================================================
-        // GUSTOS DE REGALOS Y DIÁLOGOS EXTRA
-        // ==========================================================================================
         {
             "LogName": "Miguel Gift Tastes",
             "Action": "EditData",
@@ -54,19 +43,15 @@
                 "BirthdayGift": "¡Anda! ¿Te has acordado de mi cumple?$h#$b#Normalmente se me olvida hasta a mí... Eres increíble, gracias @.$h"
             }
         },
-
-        // ==========================================================================================
-        // ANIMACIONES PERSONALIZADAS
-        // ==========================================================================================
         {
             "LogName": "Miguel Custom Animations",
             "Action": "EditData",
             "Target": "Data/animationDescriptions",
             "Entries": {
-              "Miguel_SitEast" : "16"
+                "Miguel_SitEast": "16"
             }
         },
- {
+        {
             "LogName": "Festival: Spring 13 (Festival del Huevo)",
             "Action": "EditData",
             "Target": "Data/Festivals/spring13",
@@ -76,8 +61,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 22 62/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 22 62 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -86,13 +72,14 @@
             "Action": "EditData",
             "Target": "Data/Festivals/spring24",
             "Entries": {
-                "Miguel": "Uf... bailar en público no es lo mío. Me pongo muy nervioso, tengo que ir mejorándolo poco a poco...#$b#Pero lo estoy trabajando, te lo prometo. Quizás el año que viene"
+                "Miguel": "Uf... bailar en público no es lo mío. Me pongo muy nervioso, tengo que ir mejorándolo poco a poco...#$b#Pero lo estoy trabajando, te lo prometo. Quizás el año que viene."
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 10 42/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 10 42 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -106,8 +93,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 25 36/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 25 36 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -121,8 +109,9 @@
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 25 36/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 25 36 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -131,13 +120,14 @@
             "Action": "EditData",
             "Target": "Data/Festivals/fall16",
             "Entries": {
-                "Miguel": "He estado calculando la física del juego de la ruleta... Creo que tiene un mecanismo de resistencia variable detrás, favorece a la casa. Ya he visto a dos palmar el sueldo de un mes... Ahora voy yo#$b#Pero no le digas a Lewis que sabemos que está trucado, que me echa del pueblo... Espera, será de esa manera como ha pagado su estatua de oro?"
+                "Miguel": "He estado calculando la física del juego de la ruleta... Creo que tienew un mecanismo de resistencia variable detrás, favorece a la casa. Ya he visto a dos palmar el sueldo de un mes... Ahora voy yo.#$b#Pero no le digas a Lewis que sabemos que está trucada, que me echa del pueblo... Espera, ¿será de esa manera como ha pagado su estatua de oro?"
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 38 89/faceDirection Miguel 2"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 32 68 down",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -146,13 +136,14 @@
             "Action": "EditData",
             "Target": "Data/Festivals/fall27",
             "Entries": {
-                "Miguel": "¿Has visto el laberinto? Los niños se lo están pasando super guay.#$b#Ojalá volver a tener su edad, aún me acuerdo de los vídeos de Planeta Vegetta."
+                "Miguel": "¿Has visto el laberinto? Los niños se lo están pasando super guay.#$b#Ojalá volver a tener su edad, aún me acuerdo de los vídeos de Planeta Vegetta, es una barbaridad que cuando pienses en 'Vegatta', pienses en Samuel de Luque y no en el del manga ¿Verdad? Crecimos en buenos tiempos, @."
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 26 68/faceDirection Miguel 0"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 26 68 up",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -161,13 +152,14 @@
             "Action": "EditData",
             "Target": "Data/Festivals/winter8",
             "Entries": {
-                "Miguel": "No entiendo cómo Willy puede aguantar tanto tiempo pescando en el hielo. Yo llevo tres capas térmicas y sigo sin sentir los dedos de los pies."
+                "Miguel": "No entiendo cómo Willy puede aguantar tanto tiempo pescando en el hielo. Yo llevo tres capas térmicas y sigo sin sentir los dedos de los pies, aunque los niños parecen no tener frío, se les ve muy felices. En Indalia no estamos acostumbrados a este frío. Por cierto, ¿Te apetece un café caliente? Aunque no sé si te gustará, no le pongo nada de azúcar."
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 74 27/faceDirection Miguel 1"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 74 27 right",
+                    "Delimiter": "/"
                 }
             ]
         },
@@ -176,27 +168,16 @@
             "Action": "EditData",
             "Target": "Data/Festivals/winter25",
             "Entries": {
-                "Miguel": "La Fiesta de la Estrella de Invierno... Es la única época del año en la que mi primo Gus descansa un poco.#$b#Le he comprado un juego de cuchillos nuevos de acero de Toletum, pero no digas nada."
+                "Miguel": "La Fiesta de la Estrella de Invierno... Es la única época del año en la que mi primo Gus descansa un poco.#$b#Le he comprado un juego de cuchillos nuevos de acero de Toletum, pero no digas nada. ¿Te gusta el muñeco? No consigo que el muñeco se mantenga vivo"
             },
             "TextOperations": [
                 {
                     "Operation": "Append",
-                    "Target": ["Entries", "set-up"],
-                    "Value": "/warp Miguel 13 63/faceDirection Miguel 1"
+                    "Target": ["Entries", "Set-Up_additionalCharacters"],
+                    "Value": "Miguel 13 63 right",
+                    "Delimiter": "/"
                 }
             ]
-        },
-
-        // ==========================================================================================
-        // UBICACIONES EN FESTIVALES
-        // ==========================================================================================
-        { "LogName": "Festival: Spring 13", "Action": "EditData", "Target": "Data/Festivals/spring13", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 19 63 2" } ] },
-        { "LogName": "Festival: Spring 24", "Action": "EditData", "Target": "Data/Festivals/spring24", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 4 36 1" } ] },
-        { "LogName": "Festival: Summer 11", "Action": "EditData", "Target": "Data/Festivals/summer11", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 27 14 1" } ] },
-        { "LogName": "Festival: Summer 28", "Action": "EditData", "Target": "Data/Festivals/summer28", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 25 36 2" } ] },
-        { "LogName": "Festival: Fall 16", "Action": "EditData", "Target": "Data/Festivals/fall16", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 38 89 2" } ] },
-        { "LogName": "Festival: Fall 27", "Action": "EditData", "Target": "Data/Festivals/fall27", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 26 68 0" } ] },
-        { "LogName": "Festival: Winter 8", "Action": "EditData", "Target": "Data/Festivals/winter8", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 74 27 1" } ] },
-        { "LogName": "Festival: Winter 25", "Action": "EditData", "Target": "Data/Festivals/winter25", "TextOperations": [ { "Operation": "Append", "Target": ["Entries", "set-up"], "Value": " Miguel 13 63 1" } ] }
+        }
     ]
 }

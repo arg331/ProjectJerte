@@ -1,10 +1,18 @@
 {
-    "Name": "Project Jerte - Content",
-    "Author": "Rogu",
-    "Version": "1.0.0",
-    "Description": "Datos y texturas.",
-    "UniqueID": "arg331.ProjectJerte.CP",
-    "ContentPackFor": {
-        "UniqueID": "Pathoschild.ContentPatcher"
+    "Name"          : "Project_Jerte - Expansion" , 
+    "Author"        : "Rogu" , 
+    "Version"       : "1.0.0" , 
+    "Description"   : "Un intento de mod para Stardew Valley, pensado para iterar sobre sí mismo constantemente",
+    "UniqueID"      : "arg331.ProjectJerte", 
+    "UpdateKeys"    : [],
+
+"ContentPackFor": {
+    "UniqueID": "Pathoschild.ContentPatcher"
+  },
+  "Dependencies": [
+    {
+       "UniqueID": "Pathoschild.ContentPatcher",
+       "IsRequired": true
     }
+  ]
 }

@@ -1,13 +1,13 @@
 {
     "Changes": [
-            {
+     {
             "LogName": "Registrar Musica Hedwyg",
             "Action": "EditData",
             "Target": "Data/AudioChanges",
             "Priority": "early",
             "Entries": {
-                "HedwygTheme": {
-                    "Id": "HedwygTheme",
+                "ProjectJerte.Hedwyg": {
+                    "Id": "ProjectJerte.Hedwyg",
                     "FilePaths": [ "{{AbsoluteFilePath: assets/Audio/Hedwyg.ogg}}" ],
                     "Category": "Sound"
                 }
